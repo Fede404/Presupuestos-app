@@ -1,8 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #555B6E;
+  padding: 1em;
+}
+.navbar .nav-prodBtn button, .navbar .nav-listBtn button, .navbar .nav-priceBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.25em;
+  font-weight: 500;
+  padding: 0.25em 1em;
+  color: #FFFFFF;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+.navbar .nav-prodBtn button:hover, .navbar .nav-listBtn button:hover, .navbar .nav-priceBtn button:hover {
+  border: 2px solid #FFFFFF;
+  cursor: pointer;
+}
+.navbar .nav-prodBtn button:active, .navbar .nav-listBtn button:active, .navbar .nav-priceBtn button:active {
+  background-color: #FFFFFF;
+  color: #555B6E;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,30 @@
-//ESTILOS GENERALES
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
+@use "varComp.scss";
+
+.navbar {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    background-color: varComp.$color2;
+    padding: 1em;
+    .nav-prodBtn, .nav-listBtn, .nav-priceBtn {
+        button {
+            background-color: transparent;
+            border: none;
+            font-size: 1.25em;
+            font-weight: 500;
+            padding: 0.25em 1em;
+            color: varComp.$color1;
+            border-radius: 5px;
+            border: 2px solid transparent;
+            transition: all 0.2s;
+            &:hover {
+                border: 2px solid varComp.$color1;
+                cursor: pointer;
+            }
+            &:active {
+                background-color: varComp.$color1;
+                color: varComp.$color2;
+            }
+        }
+    }
 }
