@@ -1,27 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generar Presupuesto</title>
-    <!-- LINK CSS DE APP -->
-    <link rel="stylesheet" href="style/style.css">
-    <!-- LINK FAVICON -->
-    <link rel="shortcut icon" href="resources/logo2.png" type="image/x-icon">
-</head>
-<body>
-    <nav class="navbar">
-        <div class="nav-prodBtn">
-            <button>Seleccionar Producto</button>
-        </div>
-        <div class="nav-listBtn">
-            <button>Ver Lista <span>(0)</span></button>
-        </div>
-        <div class="nav-priceBtn">
-            <button>Modificar Precios</button>
-        </div>
-    </nav>
-</body>
-
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Generar Presupuesto</title>
+		<!-- LINK CSS DE APP -->
+		<link rel="stylesheet" href="style/style.css" />
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="nav-btnGroup">
+				<div class="prodGroup">
+					<button
+						class="nav-btn"
+						id="prodListBtn"
+						onclick="displayChange()"
+					>
+						Seleccionar Producto
+					</button>
+					<div class="prodOptions" id="prodList">
+						<button class="list-btn" id="ventana">
+							Ventana Corrediza
+						</button>
+						<button class="list-btn" id="postigo">Postigo</button>
+						<button class="list-btn" id="paño-fijo">
+							Paño Fijo
+						</button>
+						<button class="list-btn" id="puerta-balcon">
+							Puerta Balcón
+						</button>
+						<button class="list-btn" id="puerta1">
+							Puerta N°1
+						</button>
+						<button class="list-btn" id="puerta2">
+							Puerta N°2
+						</button>
+						<button class="list-btn" id="puerta3">
+							Puerta N°3
+						</button>
+						<button class="list-btn" id="puerta4">
+							Puerta N°4
+						</button>
+						<button class="list-btn" id="puerta5">
+							Puerta N°5
+						</button>
+					</div>
+				</div>
+				<div class="vidrioGroup">
+					<button class="nav-btn" onclick="displayChange2()">
+						Seleccionar Vidrio
+					</button>
+					<div class="prodOptions" id="vidrioList">
+						<button class="list-btn">Vidrio 3mm.</button>
+						<button class="list-btn">Vidrio 4mm.</button>
+						<button class="list-btn">Vidrio 5mm.</button>
+						<button class="list-btn">Vidrio 6mm.</button>
+						<button class="list-btn">Laminado 3+3</button>
+						<button class="list-btn">Espejo 3mm.</button>
+						<button class="list-btn">Stipolit 4mm.</button>
+						<button class="list-btn">Martelet 4mm.</button>
+						<button class="list-btn">Pacific 4mm.</button>
+					</div>
+				</div>
+			</div>
+			<div class="nav-btnGroup">
+				<button class="nav-btn">Modificar Precios</button>
+			</div>
+		</nav>
+		<header class="header">
+			<section class="prod-sec">
+				<table id="tabla-producto">
+					<tr>
+						<th class="tabla-titulo">Perfil / Material</th>
+						<th class="tabla-titulo">Peso x ml (kg)</th>
+						<th class="tabla-titulo">
+							Cantidad Necesaria (ml / kg)
+						</th>
+						<th class="tabla-titulo">Cantidad de Cortes</th>
+						<th class="tabla-titulo">Precio</th>
+					</tr>
+					<tr>
+						<th id="PC1">AAAAA</th>
+						<th id="PXML1">AAAAA</th>
+						<th id="MN1">AAAAA</th>
+						<th id="CC1">AAAAA</th>
+						<th id="P1">AAAAA</th>
+					</tr>
+					<tr>
+						<th id="PC2">AAAAA</th>
+						<th id="PXML2">AAAAA</th>
+						<th id="MN2">AAAAA</th>
+						<th id="CC2">AAAAA</th>
+						<th id="P2">AAAAA</th>
+					</tr>
+					<tr>
+						<th id="PC3">AAAAA</th>
+						<th id="PXML3">AAAAA</th>
+						<th id="MN3">AAAAA</th>
+						<th id="CC3">AAAAA</th>
+						<th id="P3">AAAAA</th>
+					</tr>
+					<tr>
+						<th id="PC4">AAAAA</th>
+						<th id="PXML4">AAAAA</th>
+						<th id="MN4">AAAAA</th>
+						<th id="CC4">AAAAA</th>
+						<th id="P4">AAAAA</th>
+					</tr>
+					<tr>
+						<th id="PC5">AAAAA</th>
+						<th id="PXML5">AAAAA</th>
+						<th id="MN5">AAAAA</th>
+						<th id="CC5">AAAAA</th>
+						<th id="P5">AAAAA</th>
+					</tr>
+					<tr>
+						<th id="PC6">AAAAA</th>
+						<th id="PXML6">AAAAA</th>
+						<th id="MN6">AAAAA</th>
+						<th id="CC6">AAAAA</th>
+						<th id="P6">AAAAA</th>
+					</tr>
+					<tr>
+						<th id="PC7">AAAAA</th>
+						<th id="PXML7">AAAAA</th>
+						<th id="MN7">AAAAA</th>
+						<th id="CC7">AAAAA</th>
+						<th id="P7">AAAAA</th>
+					</tr>
+					<tr>
+						<th id="PC8">AAAAA</th>
+						<th id="PXML8">AAAAA</th>
+						<th id="MN8">AAAAA</th>
+						<th id="CC8">AAAAA</th>
+						<th id="P8">AAAAA</th>
+					</tr>
+				</table>
+				<div class="prodSec-options">
+					<h2>Establecer Medidas</h2>
+					<div class="prodSec-inputGroup">
+						<input
+							type="number"
+							id="ancho"
+							placeholder="Ancho(mm.)"
+						/>
+						<input
+							type="number"
+							id="alto"
+							placeholder="Alto(mm.)"
+						/>
+					</div>
+					<div class="prodSec-inputGroup2">
+						<button id="medidasbtn">Calcular</button>
+						<button id="cuentasbtn">Añadir a Presupuesto</button>
+					</div>
+					<div class="prodSec-inputGroup3">
+						<button id="goToBudgetBtn">Ir a Presupuesto</button>
+					</div>
+				</div>
+			</section>
+		</header>
+		<!-- LINK SCRIPT -->
+		<script src="script/script.js"></script>
+	</body>
 </html>

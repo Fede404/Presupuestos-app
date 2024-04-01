@@ -7,30 +7,154 @@
 }
 
 .navbar {
-  height: 10%;
+  height: 10vh;
   display: flex;
   justify-content: space-between;
-  background-color: #555B6E;
-  padding: 1em;
+  background-color: #555b6e;
+  padding: 0.5em;
 }
-.navbar .nav-prodBtn button, .navbar .nav-listBtn button, .navbar .nav-priceBtn button {
+.navbar .nav-btnGroup {
+  display: flex;
+}
+.navbar .nav-btnGroup .nav-btn {
   background-color: transparent;
   border: none;
   font-size: 1.25em;
   font-weight: 500;
   padding: 0.25em 1em;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 5px;
   border: 2px solid transparent;
   transition: all 0.2s;
 }
-.navbar .nav-prodBtn button:hover, .navbar .nav-listBtn button:hover, .navbar .nav-priceBtn button:hover {
-  border: 2px solid #FFFFFF;
+.navbar .nav-btnGroup .nav-btn:hover {
+  border: 2px solid #ffffff;
   cursor: pointer;
 }
-.navbar .nav-prodBtn button:active, .navbar .nav-listBtn button:active, .navbar .nav-priceBtn button:active {
-  background-color: #FFFFFF;
-  color: #555B6E;
+.navbar .nav-btnGroup .nav-btn:active {
+  background-color: #ffffff;
+  color: #555b6e;
+}
+.navbar .nav-btnGroup .prodGroup .prodOptions,
+.navbar .nav-btnGroup .vidrioGroup .prodOptions {
+  border: 2px solid #555b6e;
+  margin-top: 0.5em;
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.navbar .nav-btnGroup .prodGroup .prodOptions .list-btn,
+.navbar .nav-btnGroup .vidrioGroup .prodOptions .list-btn {
+  padding: 0.25em 0;
+  border: none;
+  background-color: #ffffff;
+  font-size: 1.25em;
+  width: 100%;
+  color: #555b6e;
+  transition: background-color 0.2s;
+}
+.navbar .nav-btnGroup .prodGroup .prodOptions .list-btn:hover,
+.navbar .nav-btnGroup .vidrioGroup .prodOptions .list-btn:hover {
+  background-color: #dddddd;
+  cursor: pointer;
+}
+.navbar .nav-btnGroup .prodGroup .prodOptions .list-btn:active,
+.navbar .nav-btnGroup .vidrioGroup .prodOptions .list-btn:active {
+  background-color: #bbbbbb;
+}
+
+.header {
+  height: 90vh;
+  margin: 0 1em;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.header .prod-sec {
+  display: flex;
+  justify-content: space-between;
+}
+.header .prod-sec #tabla-producto {
+  border-collapse: collapse;
+}
+.header .prod-sec #tabla-producto tr th {
+  padding: 0.75em 2em;
+  font-size: 1em;
+  border: 2px solid #555b6e;
+  color: #555b6e;
+}
+.header .prod-sec .prodSec-options {
+  display: flex;
+  flex-direction: column;
+}
+.header .prod-sec .prodSec-options h2 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #555b6e;
+}
+.header .prod-sec .prodSec-options .prodSec-inputGroup {
+  margin-top: 3em;
+  margin-left: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header .prod-sec .prodSec-options .prodSec-inputGroup input {
+  padding: 0.25em 1em;
+  width: 100%;
+  border-radius: 5px;
+  margin: 0.25em;
+  text-align: center;
+  border: 2px solid #555b6e;
+}
+.header .prod-sec .prodSec-options .prodSec-inputGroup2 {
+  margin-top: 1em;
+  margin-left: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header .prod-sec .prodSec-options .prodSec-inputGroup2 button {
+  padding: 0.5em 1em;
+  width: 100%;
+  border-radius: 5px;
+  margin: 0.25em;
+  text-align: center;
+  background-color: #555b6e;
+  color: #ffffff;
+  border: 2px solid #555b6e;
+  transition: all 0.2s;
+}
+.header .prod-sec .prodSec-options .prodSec-inputGroup2 button:hover {
+  cursor: pointer;
+  background-color: #333b6e;
+}
+.header .prod-sec .prodSec-options .prodSec-inputGroup2 button:active {
+  transform: scale(97%);
+}
+.header .prod-sec .prodSec-options .prodSec-inputGroup3 {
+  margin-top: 5em;
+  margin-left: 1em;
+}
+.header .prod-sec .prodSec-options .prodSec-inputGroup3 button {
+  font-size: 1em;
+  padding: 1.5em;
+  width: 100%;
+  border-radius: 5px;
+  margin: 0.25em;
+  text-align: center;
+  background-color: #555b6e;
+  color: #ffffff;
+  border: 2px solid #555b6e;
+  transition: all 0.2s;
+}
+.header .prod-sec .prodSec-options .prodSec-inputGroup3 button:hover {
+  cursor: pointer;
+  background-color: #333b6e;
+}
+.header .prod-sec .prodSec-options .prodSec-inputGroup3 button:active {
+  transform: scale(97%);
 }
 
 /*# sourceMappingURL=style.css.map */
