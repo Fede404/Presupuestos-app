@@ -48,20 +48,9 @@
 					</div>
 				</div>
 				<div class="vidrioGroup">
-					<button class="nav-btn" onclick="displayChange2()">
+					<button class="nav-btn" onclick="abrirModal()">
 						Seleccionar Vidrio
 					</button>
-					<div class="prodOptions" id="vidrioList">
-						<button class="list-btn">Vidrio 3mm.</button>
-						<button class="list-btn">Vidrio 4mm.</button>
-						<button class="list-btn">Vidrio 5mm.</button>
-						<button class="list-btn">Vidrio 6mm.</button>
-						<button class="list-btn">Laminado 3+3</button>
-						<button class="list-btn">Espejo 3mm.</button>
-						<button class="list-btn">Stipolit 4mm.</button>
-						<button class="list-btn">Martelet 4mm.</button>
-						<button class="list-btn">Pacific 4mm.</button>
-					</div>
 				</div>
 			</div>
 			<div class="nav-btnGroup">
@@ -157,6 +146,54 @@
 					</div>
 					<div class="prodSec-inputGroup3">
 						<button id="goToBudgetBtn">Ir a Presupuesto</button>
+					</div>
+				</div>
+			</section>
+			<section class="vidrio-sec">
+				<h2>Establecer medidas</h2>
+				<div class="vidrio-medidas-sec">
+					<input
+						type="number"
+						id="anchovidrio"
+						placeholder="Ancho(mm.)"
+					/>
+					<input
+						type="number"
+						id="altovidrio"
+						placeholder="Alto(mm.)"
+					/>
+				</div>
+				<div class="vidrio-select">
+					<select id="opc-vidrios">
+						<option value="" disabled selected>
+							Seleccionar Vidrio
+						</option>
+						<option value="vidrio3mm">Vidrio 3mm.</option>
+						<option value="vidrio4mm">Vidrio 4mm.</option>
+						<option value="vidrio5mm">Vidrio 5mm.</option>
+						<option value="vidrio6mm">Vidrio 6mm.</option>
+						<option value="laminado">Laminado 3+3</option>
+						<option value="espejo">Espejo 3mm.</option>
+						<option value="stipolit">Stipolit 4mm.</option>
+						<option value="martelet">Martelet 4mm.</option>
+						<option value="pacific">Pacific 4mm.</option>
+					</select>
+					<button id="cuentas-vidrio">Calcular</button>
+					<div class="precio-vidrio">
+						<input
+							type="text"
+							id="vidrio-desc"
+							placeholder="Precio"
+							readonly
+						/>
+						<div class="btn-group-vidrio">
+							<button id="añadirvidrio-btn">
+								Añadir Vidrio al Presupuesto
+							</button>
+							<button id="back-btn" onclick="cerrarModal()">
+								Volver
+							</button>
+						</div>
 					</div>
 				</div>
 			</section>

@@ -6,6 +6,13 @@
 	font-family: "Poppins", sans-serif;
 }
 
+//REMOVER ESTILOS POR DEFECTO DE INPUTS NUMÉRICOS
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
 // IMPORT DE FUENTE
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 

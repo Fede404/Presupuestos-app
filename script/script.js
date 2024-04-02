@@ -10,10 +10,14 @@ let displayChange = function () {
 	}
 };
 
-let displayChange2 = function () {
-	if (vidrioDiv.style.display === "none") {
-		vidrioDiv.style.display = "flex";
-	} else {
-		vidrioDiv.style.display = "none";
-	}
-};
+// VARIABLES Y FUNCIONES PARA ABRIR Y CERRAR MODAL DE VIDRIOS
+let secVidrios = document.querySelector(".vidrio-sec");
+let secProducto = document.querySelector(".prod-sec")
+let abrirModal = function() {
+	secVidrios.style.display = "flex";
+	secProducto.style.display = "none";
+}
+let cerrarModal = function() {
+	secVidrios.style.display = "none";
+	secProducto.style.display = "flex";
+}
