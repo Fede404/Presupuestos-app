@@ -48,13 +48,15 @@
 					</div>
 				</div>
 				<div class="vidrioGroup">
-					<button class="nav-btn" onclick="abrirModal()">
+					<button class="nav-btn" onclick="abrirModalVidrio()">
 						Seleccionar Vidrio
 					</button>
 				</div>
 			</div>
 			<div class="nav-btnGroup">
-				<button class="nav-btn">Modificar Precios</button>
+				<button class="nav-btn" onclick="abrirModalPrecio()">
+					Modificar Precios
+				</button>
 			</div>
 		</nav>
 		<header class="header">
@@ -70,60 +72,60 @@
 						<th class="tabla-titulo">Precio</th>
 					</tr>
 					<tr>
-						<th id="PC1">AAAAA</th>
-						<th id="PXML1">AAAAA</th>
-						<th id="MN1">AAAAA</th>
-						<th id="CC1">AAAAA</th>
-						<th id="P1">AAAAA</th>
+						<th id="PC1">-----</th>
+						<th id="PXML1">-----</th>
+						<th id="MN1">-----</th>
+						<th id="CC1">-----</th>
+						<th id="P1">-----</th>
 					</tr>
 					<tr>
-						<th id="PC2">AAAAA</th>
-						<th id="PXML2">AAAAA</th>
-						<th id="MN2">AAAAA</th>
-						<th id="CC2">AAAAA</th>
-						<th id="P2">AAAAA</th>
+						<th id="PC2">-----</th>
+						<th id="PXML2">-----</th>
+						<th id="MN2">-----</th>
+						<th id="CC2">-----</th>
+						<th id="P2">-----</th>
 					</tr>
 					<tr>
-						<th id="PC3">AAAAA</th>
-						<th id="PXML3">AAAAA</th>
-						<th id="MN3">AAAAA</th>
-						<th id="CC3">AAAAA</th>
-						<th id="P3">AAAAA</th>
+						<th id="PC3">-----</th>
+						<th id="PXML3">-----</th>
+						<th id="MN3">-----</th>
+						<th id="CC3">-----</th>
+						<th id="P3">-----</th>
 					</tr>
 					<tr>
-						<th id="PC4">AAAAA</th>
-						<th id="PXML4">AAAAA</th>
-						<th id="MN4">AAAAA</th>
-						<th id="CC4">AAAAA</th>
-						<th id="P4">AAAAA</th>
+						<th id="PC4">-----</th>
+						<th id="PXML4">-----</th>
+						<th id="MN4">-----</th>
+						<th id="CC4">-----</th>
+						<th id="P4">-----</th>
 					</tr>
 					<tr>
-						<th id="PC5">AAAAA</th>
-						<th id="PXML5">AAAAA</th>
-						<th id="MN5">AAAAA</th>
-						<th id="CC5">AAAAA</th>
-						<th id="P5">AAAAA</th>
+						<th id="PC5">-----</th>
+						<th id="PXML5">-----</th>
+						<th id="MN5">-----</th>
+						<th id="CC5">-----</th>
+						<th id="P5">-----</th>
 					</tr>
 					<tr>
-						<th id="PC6">AAAAA</th>
-						<th id="PXML6">AAAAA</th>
-						<th id="MN6">AAAAA</th>
-						<th id="CC6">AAAAA</th>
-						<th id="P6">AAAAA</th>
+						<th id="PC6">-----</th>
+						<th id="PXML6">-----</th>
+						<th id="MN6">-----</th>
+						<th id="CC6">-----</th>
+						<th id="P6">-----</th>
 					</tr>
 					<tr>
-						<th id="PC7">AAAAA</th>
-						<th id="PXML7">AAAAA</th>
-						<th id="MN7">AAAAA</th>
-						<th id="CC7">AAAAA</th>
-						<th id="P7">AAAAA</th>
+						<th id="PC7">-----</th>
+						<th id="PXML7">-----</th>
+						<th id="MN7">-----</th>
+						<th id="CC7">-----</th>
+						<th id="P7">-----</th>
 					</tr>
 					<tr>
-						<th id="PC8">AAAAA</th>
-						<th id="PXML8">AAAAA</th>
-						<th id="MN8">AAAAA</th>
-						<th id="CC8">AAAAA</th>
-						<th id="P8">AAAAA</th>
+						<th id="PC8">-----</th>
+						<th id="PXML8">-----</th>
+						<th id="MN8">-----</th>
+						<th id="CC8">-----</th>
+						<th id="P8">-----</th>
 					</tr>
 				</table>
 				<div class="prodSec-options">
@@ -190,12 +192,132 @@
 							<button id="añadirvidrio-btn">
 								Añadir Vidrio al Presupuesto
 							</button>
-							<button id="back-btn" onclick="cerrarModal()">
+							<button id="back-btn" onclick="cerrarModalVidrio()">
 								Volver
 							</button>
 						</div>
 					</div>
 				</div>
+			</section>
+			<section class="precios-sec">
+				<div class="precios-container">
+					<div class="precios-materiales">
+						<h3>Precios de Materiales</h3>
+						<ul class="precios-materiales">
+							<li>
+								<input
+									type="number"
+									id="vidrio"
+									placeholder="Vidrio"
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="aluminio"
+									placeholder="Aluminio"
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="bisagra"
+									placeholder="Bisagra"
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="picaporte"
+									placeholder="Picaporte"
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="cerradura"
+									placeholder="Cerradura"
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="falleba"
+									placeholder="Falleba"
+								/>
+							</li>
+						</ul>
+					</div>
+					<div class="precios-vidrios">
+						<h3>Precios de Vidrios</h3>
+						<ul class="precios-vidrios">
+							<li>
+								<input
+									type="number"
+									id="vidrio3mm"
+									placeholder="Vidrio 3mm."
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="vidrio4mm"
+									placeholder="Vidrio 4mm."
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="vidrio5mm"
+									placeholder="Vidrio 5mm."
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="vidrio6mm"
+									placeholder="Vidrio 6mm."
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="laminado"
+									placeholder="Laminado 3+3"
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="espejo"
+									placeholder="Espejo 3mm."
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="stipolit"
+									placeholder="Stipolit 4mm."
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="martelet"
+									placeholder="Martelet 4mm."
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="pacific"
+									placeholder="Pacific 4mm."
+								/>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<button onclick="cerrarModalPrecio()">Guardar y volver</button>
 			</section>
 		</header>
 		<!-- LINK SCRIPT -->

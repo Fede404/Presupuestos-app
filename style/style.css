@@ -250,5 +250,58 @@ input[type=number]::-webkit-outer-spin-button {
 .header .vidrio-sec .precio-vidrio .btn-group-vidrio button:active {
   transform: scale(97%);
 }
+.header .precios-sec {
+  border: 2px solid #555b6e;
+  border-radius: 10px;
+  width: 50%;
+  height: 90%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header .precios-sec .precios-container {
+  display: flex;
+  flex-direction: row;
+}
+.header .precios-sec .precios-container h3 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #555b6e;
+}
+.header .precios-sec .precios-container div {
+  margin: 0 2em;
+}
+.header .precios-sec .precios-container div ul {
+  list-style: none;
+}
+.header .precios-sec .precios-container div ul li input {
+  text-align: center;
+  margin-bottom: 0.25em;
+  padding: 0.25em 1em;
+  font-size: 1em;
+  border: 2px solid #555b6e;
+  border-radius: 5px;
+  color: #555b6e;
+}
+.header .precios-sec button {
+  height: 2.5em;
+  font-size: 1em;
+  padding: 0.25em 2em;
+  border-radius: 5px;
+  margin: 0.25em;
+  text-align: center;
+  background-color: #555b6e;
+  color: #ffffff;
+  border: 2px solid #555b6e;
+  transition: all 0.2s;
+}
+.header .precios-sec button:hover {
+  cursor: pointer;
+  background-color: #333b6e;
+}
+.header .precios-sec button:active {
+  transform: scale(97%);
+}
 
 /*# sourceMappingURL=style.css.map */

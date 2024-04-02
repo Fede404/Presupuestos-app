@@ -10,14 +10,28 @@ let displayChange = function () {
 	}
 };
 
-// VARIABLES Y FUNCIONES PARA ABRIR Y CERRAR MODAL DE VIDRIOS
+// VARIABLES Y FUNCIONES PARA ABRIR Y CERRAR MODALLES 
 let secVidrios = document.querySelector(".vidrio-sec");
 let secProducto = document.querySelector(".prod-sec")
-let abrirModal = function() {
+let secPrecios = document.querySelector(".precios-sec");
+let abrirModalVidrio = function() {
 	secVidrios.style.display = "flex";
 	secProducto.style.display = "none";
+	secPrecios.style.display = "none";
 }
-let cerrarModal = function() {
+let cerrarModalVidrio = function() {
 	secVidrios.style.display = "none";
 	secProducto.style.display = "flex";
+	secPrecios.style.display = "none";
 }
+let abrirModalPrecio = function() {
+	secVidrios.style.display = "none";
+	secProducto.style.display = "none";
+	secPrecios.style.display = "flex";
+}
+let cerrarModalPrecio = function() {
+	secVidrios.style.display = "none";
+	secProducto.style.display = "flex";
+	secPrecios.style.display = "none";
+}
+
