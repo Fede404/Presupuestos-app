@@ -1,23 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generar Presupuesto</title>
-    <!-- LINK CSS BOOTSTRAP LOCAL -->
-    <link rel="stylesheet" href="bootstrap-5.3.3/css/bootstrap.min.css">
-    <!-- LINK CSS DE APP -->
-    <link rel="stylesheet" href="style/style.css">
-    <!-- LINK FAVICON -->
-    <link rel="shortcut icon" href="resources/logo2.png" type="image/x-icon">
-</head>
-<body>
-    <nav class="navbar">
-
-    </nav>
-</body>
-
-<!-- LINK JS BOOTSTRAP LOCAL -->
-<script src="bootstrap-5.3.3/js/bootstrap.min.js"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Generar Presupuesto</title>
+		<!-- LINK CSS DE APP -->
+		<link rel="stylesheet" href="style/style.css" />
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="nav-btnGroup">
+				<div class="prodGroup">
+					<button
+						class="nav-btn"
+						id="prodListBtn"
+						onclick="displayChange()"
+					>
+						Seleccionar Producto
+					</button>
+					<div class="prodOptions" id="prodList">
+						<button class="list-btn" id="ventana">
+							Ventana Corrediza
+						</button>
+						<button class="list-btn" id="postigo">Postigo</button>
+						<button class="list-btn" id="paño-fijo">
+							Paño Fijo
+						</button>
+						<button class="list-btn" id="puerta-balcon">
+							Puerta Balcón
+						</button>
+						<button class="list-btn" id="puerta1">
+							Puerta N°1
+						</button>
+						<button class="list-btn" id="puerta2">
+							Puerta N°2
+						</button>
+						<button class="list-btn" id="puerta3">
+							Puerta N°3
+						</button>
+						<button class="list-btn" id="puerta4">
+							Puerta N°4
+						</button>
+						<button class="list-btn" id="puerta5">
+							Puerta N°5
+						</button>
+					</div>
+				</div>
+				<div class="vidrioGroup">
+					<button class="nav-btn" onclick="displayChange2()">
+						Seleccionar Vidrio
+					</button>
+				</div>
+			</div>
+			<div class="nav-btnGroup">
+				<button class="nav-btn" onclick="displayChange3()">
+					Modificar Precios
+				</button>
+			</div>
+		</nav>
+		<header class="header">
+			<section class="prod-sec">
+				<table id="tabla-producto">
+					<tr>
+						<th class="tabla-titulo">Perfil / Material</th>
+						<th class="tabla-titulo">Peso x ml (kg)</th>
+						<th class="tabla-titulo">
+							Cantidad Necesaria (ml / kg)
+						</th>
+						<th class="tabla-titulo">Cantidad de Cortes</th>
+						<th class="tabla-titulo">Precio</th>
+					</tr>
+					<tr>
+						<th id="PC1">-----</th>
+						<th id="PXML1">-----</th>
+						<th id="MN1">-----</th>
+						<th id="CC1">-----</th>
+						<th id="P1">-----</th>
+					</tr>
+					<tr>
+						<th id="PC2">-----</th>
+						<th id="PXML2">-----</th>
+						<th id="MN2">-----</th>
+						<th id="CC2">-----</th>
+						<th id="P2">-----</th>
+					</tr>
+					<tr>
+						<th id="PC3">-----</th>
+						<th id="PXML3">-----</th>
+						<th id="MN3">-----</th>
+						<th id="CC3">-----</th>
+						<th id="P3">-----</th>
+					</tr>
+					<tr>
+						<th id="PC4">-----</th>
+						<th id="PXML4">-----</th>
+						<th id="MN4">-----</th>
+						<th id="CC4">-----</th>
+						<th id="P4">-----</th>
+					</tr>
+					<tr>
+						<th id="PC5">-----</th>
+						<th id="PXML5">-----</th>
+						<th id="MN5">-----</th>
+						<th id="CC5">-----</th>
+						<th id="P5">-----</th>
+					</tr>
+					<tr>
+						<th id="PC6">-----</th>
+						<th id="PXML6">-----</th>
+						<th id="MN6">-----</th>
+						<th id="CC6">-----</th>
+						<th id="P6">-----</th>
+					</tr>
+					<tr>
+						<th id="PC7">-----</th>
+						<th id="PXML7">-----</th>
+						<th id="MN7">-----</th>
+						<th id="CC7">-----</th>
+						<th id="P7">-----</th>
+					</tr>
+					<tr>
+						<th id="PC8">-----</th>
+						<th id="PXML8">-----</th>
+						<th id="MN8">-----</th>
+						<th id="CC8">-----</th>
+						<th id="P8">-----</th>
+					</tr>
+				</table>
+				<div class="prodSec-options">
+					<h2>Establecer Medidas</h2>
+					<div class="prodSec-inputGroup">
+						<input
+							type="number"
+							id="ancho"
+							placeholder="Ancho(mm.)"
+						/>
+						<input
+							type="number"
+							id="alto"
+							placeholder="Alto(mm.)"
+						/>
+					</div>
+					<div class="prodSec-inputGroup2">
+						<button id="medidasbtn">Calcular</button>
+						<button id="cuentasbtn">Añadir a Presupuesto</button>
+					</div>
+					<div class="prodSec-inputGroup3">
+						<button id="goToBudgetBtn">Ir a Presupuesto</button>
+					</div>
+				</div>
+			</section>
+			<section class="vidrio-sec">
+				<h2>Establecer medidas</h2>
+				<div class="vidrio-medidas-sec">
+					<input
+						type="number"
+						id="anchovidrio"
+						placeholder="Ancho(mm.)"
+					/>
+					<input
+						type="number"
+						id="altovidrio"
+						placeholder="Alto(mm.)"
+					/>
+				</div>
+				<div class="vidrio-select">
+					<select id="opc-vidrios">
+						<option value="" disabled selected>
+							Seleccionar Vidrio
+						</option>
+						<option value="vidrio3mm">Vidrio 3mm.</option>
+						<option value="vidrio4mm">Vidrio 4mm.</option>
+						<option value="vidrio5mm">Vidrio 5mm.</option>
+						<option value="vidrio6mm">Vidrio 6mm.</option>
+						<option value="laminado">Laminado 3+3</option>
+						<option value="espejo">Espejo 3mm.</option>
+						<option value="stipolit">Stipolit 4mm.</option>
+						<option value="martelet">Martelet 4mm.</option>
+						<option value="pacific">Pacific 4mm.</option>
+					</select>
+					<button id="cuentas-vidrio">Calcular</button>
+				</div>
+				<div class="precio-vidrio">
+					<input
+						type="text"
+						id="vidrio-desc"
+						placeholder="Precio"
+						readonly
+					/>
+					<button id="añadirvidrio-btn">
+						Añadir Vidrio al Presupuesto
+					</button>
+					<button id="goToBudgetBtn2">
+						Ir a Presupuesto
+					</button>
+					<button id="back-btn" onclick="cerrarModalVidrio()">
+						Volver
+					</button>
+				</div>
+			</section>
+			<section class="precios-sec">
+				<div class="precios-container">
+					<div class="precios-materiales">
+						<h3>Precios de Materiales</h3>
+						<ul class="precios-materiales">
+							<li>
+								<input
+									type="number"
+									id="vidrio"
+									placeholder="Vidrio"
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="aluminio"
+									placeholder="Aluminio"
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="bisagra"
+									placeholder="Bisagra"
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="picaporte"
+									placeholder="Picaporte"
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="cerradura"
+									placeholder="Cerradura"
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="falleba"
+									placeholder="Falleba"
+								/>
+							</li>
+						</ul>
+					</div>
+					<div class="precios-vidrios">
+						<h3>Precios de Vidrios</h3>
+						<ul class="precios-vidrios">
+							<li>
+								<input
+									type="number"
+									id="vidrio3mm"
+									placeholder="Vidrio 3mm."
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="vidrio4mm"
+									placeholder="Vidrio 4mm."
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="vidrio5mm"
+									placeholder="Vidrio 5mm."
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="vidrio6mm"
+									placeholder="Vidrio 6mm."
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="laminado"
+									placeholder="Laminado 3+3"
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="espejo"
+									placeholder="Espejo 3mm."
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="stipolit"
+									placeholder="Stipolit 4mm."
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="martelet"
+									placeholder="Martelet 4mm."
+								/>
+							</li>
+							<li>
+								<input
+									type="number"
+									id="pacific"
+									placeholder="Pacific 4mm."
+								/>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<button onclick="cerrarModalPrecio()">Guardar y volver</button>
+			</section>
+		</header>
+		<!-- LINK SCRIPT -->
+		<script src="script/script.js"></script>
+	</body>
 </html>

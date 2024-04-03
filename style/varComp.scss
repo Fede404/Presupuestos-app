@@ -1,0 +1,26 @@
+//ESTILOS GENERALES
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+//REMOVER ESTILOS POR DEFECTO DE INPUTS NUMÉRICOS
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+// IMPORT DE FUENTE
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+// VARIABLES
+$color1: #ffffff;
+$color2: #555b6e;
+$color3: #dddddd;
+$color4: #bbbbbb;
+$color5: #333b6e;
+
+// MEDIA QUERIES

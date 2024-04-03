@@ -1,0 +1,311 @@
+@use "varComp.scss";
+
+.navbar {
+	height: 10vh;
+	display: flex;
+	justify-content: space-between;
+	background-color: varComp.$color2;
+	padding: 0.5em;
+	.nav-btnGroup {
+		display: flex;
+		.nav-btn {
+			background-color: transparent;
+			border: none;
+			font-size: 1.25em;
+			font-weight: 500;
+			padding: 0.25em 1em;
+			color: varComp.$color1;
+			border-radius: 5px;
+			border: 2px solid transparent;
+			transition: all 0.2s;
+			&:hover {
+				border: 2px solid varComp.$color1;
+				cursor: pointer;
+			}
+			&:active {
+				background-color: varComp.$color1;
+				color: varComp.$color2;
+			}
+		}
+		.prodGroup,
+		.vidrioGroup {
+			.nav-btn {
+				height: 100%;
+			}
+			z-index: 10;
+			.prodOptions {
+				border: 2px solid varComp.$color2;
+				margin-top: 0.5em;
+				list-style: none;
+				display: none;
+				flex-direction: column;
+				align-items: center;
+				.list-btn {
+					padding: 0.25em 0;
+					border: none;
+					background-color: varComp.$color1;
+					font-size: 1.25em;
+					width: 100%;
+					color: varComp.$color2;
+					transition: background-color 0.2s;
+					&:hover {
+						background-color: varComp.$color3;
+						cursor: pointer;
+					}
+					&:active {
+						background-color: varComp.$color4;
+					}
+				}
+			}
+		}
+	}
+}
+
+.header {
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.prod-sec {
+		width: 100%;
+		margin: 0 1em;
+		display: flex;
+		justify-content: space-around;
+		#tabla-producto {
+			width: 75%;
+			border-collapse: collapse;
+			tr {
+				th {
+					padding: 0.75em 2em;
+					font-size: 1em;
+					border: 2px solid varComp.$color2;
+					color: varComp.$color2;
+				}
+			}
+		}
+		.prodSec-options {
+			width: 25%;
+			display: flex;
+			flex-direction: column;
+			h2 {
+				text-align: center;
+				font-size: 2.5em;
+				color: varComp.$color2;
+			}
+			.prodSec-inputGroup {
+				margin-top: 3em;
+				margin-left: 1em;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				input {
+					background-color: transparent;
+					padding: 0.25em 1em;
+					width: 100%;
+					border-radius: 5px;
+					margin: 0.25em;
+					text-align: center;
+					border: 2px solid varComp.$color2;
+				}
+			}
+			.prodSec-inputGroup2 {
+				margin-top: 1em;
+				margin-left: 1em;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				button {
+					padding: 0.5em 1em;
+					width: 100%;
+					border-radius: 5px;
+					margin: 0.25em;
+					text-align: center;
+					background-color: varComp.$color2;
+					color: varComp.$color1;
+					border: 2px solid varComp.$color2;
+					transition: all 0.2s;
+					&:hover {
+						cursor: pointer;
+						background-color: varComp.$color5;
+					}
+					&:active {
+						transform: scale(97%);
+					}
+				}
+			}
+			.prodSec-inputGroup3 {
+				margin-top: 5em;
+				margin-left: 1em;
+				button {
+					font-size: 1em;
+					padding: 1.5em;
+					width: 100%;
+					border-radius: 5px;
+					margin: 0.25em;
+					text-align: center;
+					background-color: varComp.$color2;
+					color: varComp.$color1;
+					border: 2px solid varComp.$color2;
+					transition: all 0.2s;
+					&:hover {
+						cursor: pointer;
+						background-color: varComp.$color5;
+					}
+					&:active {
+						transform: scale(97%);
+					}
+				}
+			}
+		}
+	}
+	.vidrio-sec {
+		padding: 2em;
+		border: 2px solid varComp.$color2;
+		border-radius: 10px;
+		width: 50%;
+		height: 75%;
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		h2 {
+			font-size: 3em;
+			color: varComp.$color2;
+		}
+		.vidrio-medidas-sec {
+			display: flex;
+			width: 75%;
+			justify-content: center;
+			input {
+				width: 100%;
+				height: 3em;
+				padding: 0.25em 1.75em;
+				border: 2px solid varComp.$color2;
+				border-radius: 5px;
+				margin: 0.25em;
+				text-align: center;
+			}
+		}
+		.vidrio-select {
+			width: 75%;
+			select {
+				text-align: center;
+				width: 100%;
+				padding: 0.25em 2.5em;
+				height: 3em;
+				border: 2px solid varComp.$color2;
+				border-radius: 5px;
+			}
+			button {
+				margin-top: 0.5em;
+				height: 2.5em;
+				width: 100%;
+				font-size: 1em;
+				padding: 0.25em 2em;
+				border-radius: 5px;
+				text-align: center;
+				background-color: varComp.$color2;
+				color: varComp.$color1;
+				border: 2px solid varComp.$color2;
+				transition: all 0.2s;
+				&:hover {
+					cursor: pointer;
+					background-color: varComp.$color5;
+				}
+				&:active {
+					transform: scale(97%);
+				}
+			}
+		}
+		.precio-vidrio {
+			display: flex;
+			flex-direction: column;
+			width: 75%;
+			input {
+				height: 5em;
+				width: 100%;
+				border: 2px solid varComp.$color2;
+				border-radius: 5px;
+				text-align: center;
+				margin-top: 0.25em;
+			}
+			button {
+				height: 2.5em;
+				font-size: 1em;
+				padding: 0.25em 2em;
+				border-radius: 5px;
+				margin-top: 0.5em;
+				text-align: center;
+				background-color: varComp.$color2;
+				color: varComp.$color1;
+				border: 2px solid varComp.$color2;
+				transition: all 0.2s;
+				&:hover {
+					cursor: pointer;
+					background-color: varComp.$color5;
+				}
+				&:active {
+					transform: scale(97%);
+				}
+			}
+		}
+	}
+	.precios-sec {
+		padding: 2em;
+		border: 2px solid varComp.$color2;
+		border-radius: 10px;
+		width: 50%;
+		height: 75%;
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		.precios-container {
+			display: flex;
+			flex-direction: row;
+			h3 {
+				text-align: center;
+				font-size: 2em;
+				color: varComp.$color2;
+			}
+			div {
+				margin: 0 2em;
+				ul {
+					list-style: none;
+					li {
+						input {
+							width: 100%;
+							text-align: center;
+							margin-bottom: 0.25em;
+							padding: 0.25em 1em;
+							font-size: 1em;
+							border: 2px solid varComp.$color2;
+							border-radius: 5px;
+							color: varComp.$color2;
+						}
+					}
+				}
+			}
+		}
+		button {
+			height: 3em;
+			font-size: 1em;
+			width: 75%;
+			padding: 0.25em 2em;
+			border-radius: 5px;
+			margin-top: 2em;
+			text-align: center;
+			background-color: varComp.$color2;
+			color: varComp.$color1;
+			border: 2px solid varComp.$color2;
+			transition: all 0.2s;
+			&:hover {
+				cursor: pointer;
+				background-color: varComp.$color5;
+			}
+			&:active {
+				transform: scale(97%);
+			}
+		}
+	}
+}
