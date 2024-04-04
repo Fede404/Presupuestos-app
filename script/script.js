@@ -13,37 +13,58 @@ let displayChange = function () {
 let secVidrios = document.querySelector(".vidrio-sec");
 let secProducto = document.querySelector(".prod-sec")
 let secPrecios = document.querySelector(".precios-sec");
+let secPresupuestos = document.querySelector(".hojaPresupuesto-sec")
 
 let displayChange2 = function () {
 	if (secVidrios.style.display === "none") {
 		secVidrios.style.display = "flex";
 		secProducto.style.display = "none";
 		secPrecios.style.display = "none";
+		secPresupuestos.style.display = "none";
 	} else {
 		secVidrios.style.display = "none";
 		secProducto.style.display = "flex";
 		secPrecios.style.display = "none";
+		secPresupuestos.style.display = "none";
 	}
 };
 let cerrarModalVidrio = function() {
 	secVidrios.style.display = "none";
 	secProducto.style.display = "flex";
 	secPrecios.style.display = "none";
+	secPresupuestos.style.display = "none";
 }
 let displayChange3 = function () {
 	if (secPrecios.style.display === "none") {
 		secPrecios.style.display = "flex";
 		secProducto.style.display = "none";
 		secVidrios.style.display = "none";
+		secPresupuestos.style.display = "none";
 	} else {
 		secPrecios.style.display = "none";
 		secProducto.style.display = "flex";
 		secVidrios.style.display = "none";
+		secPresupuestos.style.display = "none";
 	}
 };
 let cerrarModalPrecio = function() {
 	secVidrios.style.display = "none";
 	secProducto.style.display = "flex";
 	secPrecios.style.display = "none";
+	secPresupuestos.style.display = "none";
 }
+
+let displayChange4 = function() {
+	secVidrios.style.display = "none";
+	secProducto.style.display = "none";
+	secPrecios.style.display = "none";
+	secPresupuestos.style.display = "flex";
+}
+
+let cerrarModalPresupuesto = function() {
+	secVidrios.style.display = "none";
+	secProducto.style.display = "flex";
+	secPrecios.style.display = "none";
+	secPresupuestos.style.display = "none";
+} 
 

@@ -1,12 +1,14 @@
 @use "varComp.scss";
 
+// ESTILOS NAV
 .navbar {
 	height: 10vh;
 	display: flex;
 	justify-content: space-between;
 	background-color: varComp.$color2;
 	padding: 0.5em;
-	.nav-btnGroup {
+	// DIV CON BOTONES PRODUCTO, VIDRIO Y PRECIO
+	.nav-btn-container {
 		display: flex;
 		.nav-btn {
 			background-color: transparent;
@@ -27,12 +29,14 @@
 				color: varComp.$color2;
 			}
 		}
-		.prodGroup,
+		// DIVS PRODUCTO Y VIDRIO (MODAL)
+		.prod-container,
 		.vidrioGroup {
 			.nav-btn {
 				height: 100%;
 			}
-			z-index: 10;
+			z-index: 1;
+			// DIV LISTA DE PRODUCTOS
 			.prodOptions {
 				border: 2px solid varComp.$color2;
 				margin-top: 0.5em;
@@ -61,18 +65,21 @@
 	}
 }
 
+// ESTILOS HEADER
 .header {
 	height: 90vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	// SECCIÓN PRODUCTOS
 	.prod-sec {
 		width: 100%;
 		margin: 0 1em;
 		display: flex;
 		justify-content: space-around;
+		// TABLA DE PRODUCTO
 		#tabla-producto {
-			width: 75%;
+			width: 70%;
 			border-collapse: collapse;
 			tr {
 				th {
@@ -83,8 +90,9 @@
 				}
 			}
 		}
-		.prodSec-options {
-			width: 25%;
+		// MEDIDAS DE PRODUCTO
+		.prodSec-options-container {
+			width: 30%;
 			display: flex;
 			flex-direction: column;
 			h2 {
@@ -92,15 +100,17 @@
 				font-size: 2.5em;
 				color: varComp.$color2;
 			}
-			.prodSec-inputGroup {
+			.prodSec-inputGroup-container {
 				margin-top: 3em;
 				margin-left: 1em;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				input {
+					font-size: 1em;
 					background-color: transparent;
 					padding: 0.25em 1em;
+					height: 3em;
 					width: 100%;
 					border-radius: 5px;
 					margin: 0.25em;
@@ -108,14 +118,16 @@
 					border: 2px solid varComp.$color2;
 				}
 			}
-			.prodSec-inputGroup2 {
+			.prodSec-inputGroup2-container {
 				margin-top: 1em;
 				margin-left: 1em;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				button {
+					font-size: 1em;
 					padding: 0.5em 1em;
+					height: 3em;
 					width: 100%;
 					border-radius: 5px;
 					margin: 0.25em;
@@ -137,8 +149,8 @@
 				margin-top: 5em;
 				margin-left: 1em;
 				button {
-					font-size: 1em;
-					padding: 1.5em;
+					font-size: 1.25em;
+					height: 4em;
 					width: 100%;
 					border-radius: 5px;
 					margin: 0.25em;
@@ -158,6 +170,7 @@
 			}
 		}
 	}
+	// SECCIÓN VIDRIOS (MODAL)
 	.vidrio-sec {
 		padding: 2em;
 		border: 2px solid varComp.$color2;
@@ -172,11 +185,13 @@
 			font-size: 3em;
 			color: varComp.$color2;
 		}
-		.vidrio-medidas-sec {
+		// MEDIDAS DE VIDRIO
+		.vidrio-medidas-container {
 			display: flex;
 			width: 75%;
 			justify-content: center;
 			input {
+				font-size: 1em;
 				width: 100%;
 				height: 3em;
 				padding: 0.25em 1.75em;
@@ -186,9 +201,11 @@
 				text-align: center;
 			}
 		}
-		.vidrio-select {
+		// SELECT DE VIDRIO
+		.vidrio-select-container {
 			width: 75%;
 			select {
+				font-size: 1em;
 				text-align: center;
 				width: 100%;
 				padding: 0.25em 2.5em;
@@ -217,12 +234,14 @@
 				}
 			}
 		}
-		.precio-vidrio {
+		// PRECIO VIDRIO
+		.precio-vidrio-container {
 			display: flex;
 			flex-direction: column;
 			width: 75%;
 			input {
 				height: 5em;
+				font-size: 1.5em;
 				width: 100%;
 				border: 2px solid varComp.$color2;
 				border-radius: 5px;
@@ -250,6 +269,7 @@
 			}
 		}
 	}
+	// SECCIÓN PRECIOS (MODAL)
 	.precios-sec {
 		padding: 2em;
 		border: 2px solid varComp.$color2;
@@ -260,6 +280,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		// CONTAINER DE PRECIOS
 		.precios-container {
 			display: flex;
 			flex-direction: row;
@@ -268,15 +289,16 @@
 				font-size: 2em;
 				color: varComp.$color2;
 			}
-			div {
+			.precios-materiales-container, .precios-vidrios-container {
 				margin: 0 2em;
 				ul {
 					list-style: none;
 					li {
 						input {
 							width: 100%;
+							height: 2.5em;
 							text-align: center;
-							margin-bottom: 0.25em;
+							margin-bottom: 0.5em;
 							padding: 0.25em 1em;
 							font-size: 1em;
 							border: 2px solid varComp.$color2;
@@ -289,11 +311,11 @@
 		}
 		button {
 			height: 3em;
-			font-size: 1em;
+			font-size: 1.25em;
 			width: 75%;
-			padding: 0.25em 2em;
+			padding: 0.25em;
+			margin-top: 1em;
 			border-radius: 5px;
-			margin-top: 2em;
 			text-align: center;
 			background-color: varComp.$color2;
 			color: varComp.$color1;
@@ -305,6 +327,47 @@
 			}
 			&:active {
 				transform: scale(97%);
+			}
+		}
+	// SECCIÓN HOJA DE PRESUPUESTOS (MODAL)
+	}
+	.hojaPresupuesto-sec {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		.hoja-container {
+			margin: 1em;
+			height: 90%;
+			width: 75%;
+			border: 2px solid varComp.$color2;
+		}
+		.opciones-container {
+			margin: 1em;
+			height: 10%;
+			width: 75%;
+			display: flex;
+			justify-content: space-around;
+			button {
+				height: 3em;
+				font-size: 1.25em;
+				width: 30%;
+				padding: 0.25em;
+				margin-top: 1em;
+				border-radius: 5px;
+				text-align: center;
+				background-color: varComp.$color2;
+				color: varComp.$color1;
+				border: 2px solid varComp.$color2;
+				transition: all 0.2s;
+				&:hover {
+					cursor: pointer;
+					background-color: varComp.$color5;
+				}
+				&:active {
+					transform: scale(97%);
+				}
 			}
 		}
 	}

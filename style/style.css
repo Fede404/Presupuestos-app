@@ -19,10 +19,10 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: #555b6e;
   padding: 0.5em;
 }
-.navbar .nav-btnGroup {
+.navbar .nav-btn-container {
   display: flex;
 }
-.navbar .nav-btnGroup .nav-btn {
+.navbar .nav-btn-container .nav-btn {
   background-color: transparent;
   border: none;
   font-size: 1.25em;
@@ -33,24 +33,24 @@ input[type=number]::-webkit-outer-spin-button {
   border: 2px solid transparent;
   transition: all 0.2s;
 }
-.navbar .nav-btnGroup .nav-btn:hover {
+.navbar .nav-btn-container .nav-btn:hover {
   border: 2px solid #ffffff;
   cursor: pointer;
 }
-.navbar .nav-btnGroup .nav-btn:active {
+.navbar .nav-btn-container .nav-btn:active {
   background-color: #ffffff;
   color: #555b6e;
 }
-.navbar .nav-btnGroup .prodGroup,
-.navbar .nav-btnGroup .vidrioGroup {
-  z-index: 10;
+.navbar .nav-btn-container .prod-container,
+.navbar .nav-btn-container .vidrioGroup {
+  z-index: 1;
 }
-.navbar .nav-btnGroup .prodGroup .nav-btn,
-.navbar .nav-btnGroup .vidrioGroup .nav-btn {
+.navbar .nav-btn-container .prod-container .nav-btn,
+.navbar .nav-btn-container .vidrioGroup .nav-btn {
   height: 100%;
 }
-.navbar .nav-btnGroup .prodGroup .prodOptions,
-.navbar .nav-btnGroup .vidrioGroup .prodOptions {
+.navbar .nav-btn-container .prod-container .prodOptions,
+.navbar .nav-btn-container .vidrioGroup .prodOptions {
   border: 2px solid #555b6e;
   margin-top: 0.5em;
   list-style: none;
@@ -58,8 +58,8 @@ input[type=number]::-webkit-outer-spin-button {
   flex-direction: column;
   align-items: center;
 }
-.navbar .nav-btnGroup .prodGroup .prodOptions .list-btn,
-.navbar .nav-btnGroup .vidrioGroup .prodOptions .list-btn {
+.navbar .nav-btn-container .prod-container .prodOptions .list-btn,
+.navbar .nav-btn-container .vidrioGroup .prodOptions .list-btn {
   padding: 0.25em 0;
   border: none;
   background-color: #ffffff;
@@ -68,13 +68,13 @@ input[type=number]::-webkit-outer-spin-button {
   color: #555b6e;
   transition: background-color 0.2s;
 }
-.navbar .nav-btnGroup .prodGroup .prodOptions .list-btn:hover,
-.navbar .nav-btnGroup .vidrioGroup .prodOptions .list-btn:hover {
+.navbar .nav-btn-container .prod-container .prodOptions .list-btn:hover,
+.navbar .nav-btn-container .vidrioGroup .prodOptions .list-btn:hover {
   background-color: #dddddd;
   cursor: pointer;
 }
-.navbar .nav-btnGroup .prodGroup .prodOptions .list-btn:active,
-.navbar .nav-btnGroup .vidrioGroup .prodOptions .list-btn:active {
+.navbar .nav-btn-container .prod-container .prodOptions .list-btn:active,
+.navbar .nav-btn-container .vidrioGroup .prodOptions .list-btn:active {
   background-color: #bbbbbb;
 }
 
@@ -91,7 +91,7 @@ input[type=number]::-webkit-outer-spin-button {
   justify-content: space-around;
 }
 .header .prod-sec #tabla-producto {
-  width: 75%;
+  width: 70%;
   border-collapse: collapse;
 }
 .header .prod-sec #tabla-producto tr th {
@@ -100,41 +100,45 @@ input[type=number]::-webkit-outer-spin-button {
   border: 2px solid #555b6e;
   color: #555b6e;
 }
-.header .prod-sec .prodSec-options {
-  width: 25%;
+.header .prod-sec .prodSec-options-container {
+  width: 30%;
   display: flex;
   flex-direction: column;
 }
-.header .prod-sec .prodSec-options h2 {
+.header .prod-sec .prodSec-options-container h2 {
   text-align: center;
   font-size: 2.5em;
   color: #555b6e;
 }
-.header .prod-sec .prodSec-options .prodSec-inputGroup {
+.header .prod-sec .prodSec-options-container .prodSec-inputGroup-container {
   margin-top: 3em;
   margin-left: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.header .prod-sec .prodSec-options .prodSec-inputGroup input {
+.header .prod-sec .prodSec-options-container .prodSec-inputGroup-container input {
+  font-size: 1em;
   background-color: transparent;
   padding: 0.25em 1em;
+  height: 3em;
   width: 100%;
   border-radius: 5px;
   margin: 0.25em;
   text-align: center;
   border: 2px solid #555b6e;
 }
-.header .prod-sec .prodSec-options .prodSec-inputGroup2 {
+.header .prod-sec .prodSec-options-container .prodSec-inputGroup2-container {
   margin-top: 1em;
   margin-left: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.header .prod-sec .prodSec-options .prodSec-inputGroup2 button {
+.header .prod-sec .prodSec-options-container .prodSec-inputGroup2-container button {
+  font-size: 1em;
   padding: 0.5em 1em;
+  height: 3em;
   width: 100%;
   border-radius: 5px;
   margin: 0.25em;
@@ -144,20 +148,20 @@ input[type=number]::-webkit-outer-spin-button {
   border: 2px solid #555b6e;
   transition: all 0.2s;
 }
-.header .prod-sec .prodSec-options .prodSec-inputGroup2 button:hover {
+.header .prod-sec .prodSec-options-container .prodSec-inputGroup2-container button:hover {
   cursor: pointer;
   background-color: #333b6e;
 }
-.header .prod-sec .prodSec-options .prodSec-inputGroup2 button:active {
+.header .prod-sec .prodSec-options-container .prodSec-inputGroup2-container button:active {
   transform: scale(97%);
 }
-.header .prod-sec .prodSec-options .prodSec-inputGroup3 {
+.header .prod-sec .prodSec-options-container .prodSec-inputGroup3 {
   margin-top: 5em;
   margin-left: 1em;
 }
-.header .prod-sec .prodSec-options .prodSec-inputGroup3 button {
-  font-size: 1em;
-  padding: 1.5em;
+.header .prod-sec .prodSec-options-container .prodSec-inputGroup3 button {
+  font-size: 1.25em;
+  height: 4em;
   width: 100%;
   border-radius: 5px;
   margin: 0.25em;
@@ -167,11 +171,11 @@ input[type=number]::-webkit-outer-spin-button {
   border: 2px solid #555b6e;
   transition: all 0.2s;
 }
-.header .prod-sec .prodSec-options .prodSec-inputGroup3 button:hover {
+.header .prod-sec .prodSec-options-container .prodSec-inputGroup3 button:hover {
   cursor: pointer;
   background-color: #333b6e;
 }
-.header .prod-sec .prodSec-options .prodSec-inputGroup3 button:active {
+.header .prod-sec .prodSec-options-container .prodSec-inputGroup3 button:active {
   transform: scale(97%);
 }
 .header .vidrio-sec {
@@ -189,12 +193,13 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 3em;
   color: #555b6e;
 }
-.header .vidrio-sec .vidrio-medidas-sec {
+.header .vidrio-sec .vidrio-medidas-container {
   display: flex;
   width: 75%;
   justify-content: center;
 }
-.header .vidrio-sec .vidrio-medidas-sec input {
+.header .vidrio-sec .vidrio-medidas-container input {
+  font-size: 1em;
   width: 100%;
   height: 3em;
   padding: 0.25em 1.75em;
@@ -203,10 +208,11 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0.25em;
   text-align: center;
 }
-.header .vidrio-sec .vidrio-select {
+.header .vidrio-sec .vidrio-select-container {
   width: 75%;
 }
-.header .vidrio-sec .vidrio-select select {
+.header .vidrio-sec .vidrio-select-container select {
+  font-size: 1em;
   text-align: center;
   width: 100%;
   padding: 0.25em 2.5em;
@@ -214,7 +220,7 @@ input[type=number]::-webkit-outer-spin-button {
   border: 2px solid #555b6e;
   border-radius: 5px;
 }
-.header .vidrio-sec .vidrio-select button {
+.header .vidrio-sec .vidrio-select-container button {
   margin-top: 0.5em;
   height: 2.5em;
   width: 100%;
@@ -227,27 +233,28 @@ input[type=number]::-webkit-outer-spin-button {
   border: 2px solid #555b6e;
   transition: all 0.2s;
 }
-.header .vidrio-sec .vidrio-select button:hover {
+.header .vidrio-sec .vidrio-select-container button:hover {
   cursor: pointer;
   background-color: #333b6e;
 }
-.header .vidrio-sec .vidrio-select button:active {
+.header .vidrio-sec .vidrio-select-container button:active {
   transform: scale(97%);
 }
-.header .vidrio-sec .precio-vidrio {
+.header .vidrio-sec .precio-vidrio-container {
   display: flex;
   flex-direction: column;
   width: 75%;
 }
-.header .vidrio-sec .precio-vidrio input {
+.header .vidrio-sec .precio-vidrio-container input {
   height: 5em;
+  font-size: 1.5em;
   width: 100%;
   border: 2px solid #555b6e;
   border-radius: 5px;
   text-align: center;
   margin-top: 0.25em;
 }
-.header .vidrio-sec .precio-vidrio button {
+.header .vidrio-sec .precio-vidrio-container button {
   height: 2.5em;
   font-size: 1em;
   padding: 0.25em 2em;
@@ -259,11 +266,11 @@ input[type=number]::-webkit-outer-spin-button {
   border: 2px solid #555b6e;
   transition: all 0.2s;
 }
-.header .vidrio-sec .precio-vidrio button:hover {
+.header .vidrio-sec .precio-vidrio-container button:hover {
   cursor: pointer;
   background-color: #333b6e;
 }
-.header .vidrio-sec .precio-vidrio button:active {
+.header .vidrio-sec .precio-vidrio-container button:active {
   transform: scale(97%);
 }
 .header .precios-sec {
@@ -286,16 +293,17 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 2em;
   color: #555b6e;
 }
-.header .precios-sec .precios-container div {
+.header .precios-sec .precios-container .precios-materiales-container, .header .precios-sec .precios-container .precios-vidrios-container {
   margin: 0 2em;
 }
-.header .precios-sec .precios-container div ul {
+.header .precios-sec .precios-container .precios-materiales-container ul, .header .precios-sec .precios-container .precios-vidrios-container ul {
   list-style: none;
 }
-.header .precios-sec .precios-container div ul li input {
+.header .precios-sec .precios-container .precios-materiales-container ul li input, .header .precios-sec .precios-container .precios-vidrios-container ul li input {
   width: 100%;
+  height: 2.5em;
   text-align: center;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5em;
   padding: 0.25em 1em;
   font-size: 1em;
   border: 2px solid #555b6e;
@@ -304,11 +312,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .header .precios-sec button {
   height: 3em;
-  font-size: 1em;
+  font-size: 1.25em;
   width: 75%;
-  padding: 0.25em 2em;
+  padding: 0.25em;
+  margin-top: 1em;
   border-radius: 5px;
-  margin-top: 2em;
   text-align: center;
   background-color: #555b6e;
   color: #ffffff;
@@ -320,6 +328,46 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: #333b6e;
 }
 .header .precios-sec button:active {
+  transform: scale(97%);
+}
+.header .hojaPresupuesto-sec {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.header .hojaPresupuesto-sec .hoja-container {
+  margin: 1em;
+  height: 90%;
+  width: 75%;
+  border: 2px solid #555b6e;
+}
+.header .hojaPresupuesto-sec .opciones-container {
+  margin: 1em;
+  height: 10%;
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+}
+.header .hojaPresupuesto-sec .opciones-container button {
+  height: 3em;
+  font-size: 1.25em;
+  width: 30%;
+  padding: 0.25em;
+  margin-top: 1em;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #555b6e;
+  color: #ffffff;
+  border: 2px solid #555b6e;
+  transition: all 0.2s;
+}
+.header .hojaPresupuesto-sec .opciones-container button:hover {
+  cursor: pointer;
+  background-color: #333b6e;
+}
+.header .hojaPresupuesto-sec .opciones-container button:active {
   transform: scale(97%);
 }
 

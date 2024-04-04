@@ -9,9 +9,12 @@
 		<link rel="stylesheet" href="style/style.css" />
 	</head>
 	<body>
+
+		<!-- NAV -->
 		<nav class="navbar">
-			<div class="nav-btnGroup">
-				<div class="prodGroup">
+			<!-- DIV PRODUCTO -->
+			<div class="nav-btn-container">
+				<div class="prod-container">
 					<button
 						class="nav-btn"
 						id="prodListBtn"
@@ -19,6 +22,7 @@
 					>
 						Seleccionar Producto
 					</button>
+					<!-- DIV LISTA DE PRODUCTOS -->
 					<div class="prodOptions" id="prodList">
 						<button class="list-btn" id="ventana">
 							Ventana Corrediza
@@ -47,20 +51,27 @@
 						</button>
 					</div>
 				</div>
+				<!-- DIV VIDRIO -->
 				<div class="vidrioGroup">
 					<button class="nav-btn" onclick="displayChange2()">
 						Seleccionar Vidrio
 					</button>
 				</div>
 			</div>
-			<div class="nav-btnGroup">
+			<!-- DIV PRECIOS -->
+			<div class="nav-btn-container">
 				<button class="nav-btn" onclick="displayChange3()">
 					Modificar Precios
 				</button>
 			</div>
 		</nav>
+		<!-- FIN NAV -->
+
+		<!-- HEADER -->
 		<header class="header">
+			<!-- SECCIÓN PRODUCTO -->
 			<section class="prod-sec">
+				<!-- TABLA DE INFORMACIÓN DE PRODUCTO -->
 				<table id="tabla-producto">
 					<tr>
 						<th class="tabla-titulo">Perfil / Material</th>
@@ -128,9 +139,10 @@
 						<th id="P8">-----</th>
 					</tr>
 				</table>
-				<div class="prodSec-options">
+				<!-- MEDIDAS DE PRODUCTO -->
+				<div class="prodSec-options-container">
 					<h2>Establecer Medidas</h2>
-					<div class="prodSec-inputGroup">
+					<div class="prodSec-inputGroup-container">
 						<input
 							type="number"
 							id="ancho"
@@ -142,18 +154,20 @@
 							placeholder="Alto(mm.)"
 						/>
 					</div>
-					<div class="prodSec-inputGroup2">
+					<div class="prodSec-inputGroup2-container">
 						<button id="medidasbtn">Calcular</button>
 						<button id="cuentasbtn">Añadir a Presupuesto</button>
 					</div>
 					<div class="prodSec-inputGroup3">
-						<button id="goToBudgetBtn">Ir a Presupuesto</button>
+						<button onclick="displayChange4()">Ir a Presupuesto</button>
 					</div>
 				</div>
 			</section>
+			<!-- SECCIÓN VIDRIOS (MODAL) -->
 			<section class="vidrio-sec">
 				<h2>Establecer medidas</h2>
-				<div class="vidrio-medidas-sec">
+				<!-- MEDIDAS DE VIDRIO -->
+				<div class="vidrio-medidas-container">
 					<input
 						type="number"
 						id="anchovidrio"
@@ -165,7 +179,8 @@
 						placeholder="Alto(mm.)"
 					/>
 				</div>
-				<div class="vidrio-select">
+				<!-- SELECT DE VIDRIO -->
+				<div class="vidrio-select-container">
 					<select id="opc-vidrios">
 						<option value="" disabled selected>
 							Seleccionar Vidrio
@@ -182,7 +197,8 @@
 					</select>
 					<button id="cuentas-vidrio">Calcular</button>
 				</div>
-				<div class="precio-vidrio">
+				<!-- PRECIO DE VIDRIO -->
+				<div class="precio-vidrio-container">
 					<input
 						type="text"
 						id="vidrio-desc"
@@ -190,19 +206,20 @@
 						readonly
 					/>
 					<button id="añadirvidrio-btn">
-						Añadir Vidrio al Presupuesto
+						Añadir al Presupuesto
 					</button>
-					<button id="goToBudgetBtn2">
+					<button onclick="displayChange4()">
 						Ir a Presupuesto
 					</button>
-					<button id="back-btn" onclick="cerrarModalVidrio()">
+					<button onclick="cerrarModalVidrio()">
 						Volver
 					</button>
 				</div>
 			</section>
+			<!-- SECCIÓN DE PRECIOS (MODAL) -->
 			<section class="precios-sec">
 				<div class="precios-container">
-					<div class="precios-materiales">
+					<div class="precios-materiales-container">
 						<h3>Precios de Materiales</h3>
 						<ul class="precios-materiales">
 							<li>
@@ -249,7 +266,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="precios-vidrios">
+					<div class="precios-vidrios-container">
 						<h3>Precios de Vidrios</h3>
 						<ul class="precios-vidrios">
 							<li>
@@ -320,7 +337,19 @@
 				</div>
 				<button onclick="cerrarModalPrecio()">Guardar y volver</button>
 			</section>
+			<!-- SECCIÓN HOJA DE PRESUPUESTO (MODAL) -->
+			<section class="hojaPresupuesto-sec">
+				<div class="hoja-container">
+
+				</div>
+				<div class="opciones-container">
+					<button onclick="cerrarModalPresupuesto()">Volver</button>
+					<button>Imprimir o Descargar</button>
+				</div>
+			</section>
 		</header>
+		<!-- FIN HEADER -->
+
 		<!-- LINK SCRIPT -->
 		<script src="script/script.js"></script>
 	</body>
