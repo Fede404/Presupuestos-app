@@ -14,6 +14,7 @@
 		<nav class="navbar">
 			<!-- DIV PRODUCTO -->
 			<div class="nav-btn-container">
+				<!-- CONTENEDOR BOTÓN Y LISTA DE PRODUCTOS -->
 				<div class="prod-container">
 					<button
 						class="nav-btn"
@@ -58,8 +59,9 @@
 					</button>
 				</div>
 			</div>
-			<!-- DIV PRECIOS -->
+			<!-- DIV PRECIOS Y LISTA -->
 			<div class="nav-btn-container">
+				<button class="nav-btn">Ver Lista</button>
 				<button class="nav-btn" onclick="displayChange3()">
 					Modificar Precios
 				</button>
@@ -139,10 +141,11 @@
 						<th id="P8">-----</th>
 					</tr>
 				</table>
-				<!-- MEDIDAS DE PRODUCTO -->
+				<!-- CONTENEDOR DE MEDIDAS DE PRODUCTO -->
 				<div class="prodSec-options-container">
-					<h2>Establecer Medidas</h2>
+					<!-- CONTENEDOR DE INPUTS DE MEDIDAS -->
 					<div class="prodSec-inputGroup-container">
+						<h2>Establecer Medidas</h2>
 						<input
 							type="number"
 							id="ancho"
@@ -154,19 +157,18 @@
 							placeholder="Alto(mm.)"
 						/>
 					</div>
+					<!-- CONTENEDOR DE BOTONES -->
 					<div class="prodSec-inputGroup2-container">
 						<button id="medidasbtn">Calcular</button>
-						<button id="cuentasbtn">Añadir a Presupuesto</button>
-					</div>
-					<div class="prodSec-inputGroup3">
-						<button onclick="displayChange4()">Ir a Presupuesto</button>
+						<button id="agregarProducto-btn">Añadir a Presupuesto</button>
+						<button onclick="abrirModalPresupuesto()">Ir a Presupuesto</button>
 					</div>
 				</div>
 			</section>
 			<!-- SECCIÓN VIDRIOS (MODAL) -->
 			<section class="vidrio-sec">
 				<h2>Establecer medidas</h2>
-				<!-- MEDIDAS DE VIDRIO -->
+				<!-- CONTENEDOR DE MEDIDAS DE VIDRIO -->
 				<div class="vidrio-medidas-container">
 					<input
 						type="number"
@@ -179,7 +181,7 @@
 						placeholder="Alto(mm.)"
 					/>
 				</div>
-				<!-- SELECT DE VIDRIO -->
+				<!-- CONTENEDOR DE SELECT DE VIDRIO -->
 				<div class="vidrio-select-container">
 					<select id="opc-vidrios">
 						<option value="" disabled selected>
@@ -197,7 +199,7 @@
 					</select>
 					<button id="cuentas-vidrio">Calcular</button>
 				</div>
-				<!-- PRECIO DE VIDRIO -->
+				<!-- CONTENEDOR DE PRECIO DE VIDRIO -->
 				<div class="precio-vidrio-container">
 					<input
 						type="text"
@@ -205,10 +207,10 @@
 						placeholder="Precio"
 						readonly
 					/>
-					<button id="añadirvidrio-btn">
+					<button id="agregravidrio-btn">
 						Añadir al Presupuesto
 					</button>
-					<button onclick="displayChange4()">
+					<button onclick="abrirModalPresupuesto()">
 						Ir a Presupuesto
 					</button>
 					<button onclick="cerrarModalVidrio()">
@@ -218,7 +220,9 @@
 			</section>
 			<!-- SECCIÓN DE PRECIOS (MODAL) -->
 			<section class="precios-sec">
+				<!-- CONTENEDOR DE PRECIOS -->
 				<div class="precios-container">
+					<!-- CONTENEDOR DE PRECIOS DE MATERIALES -->
 					<div class="precios-materiales-container">
 						<h3>Precios de Materiales</h3>
 						<ul class="precios-materiales">
@@ -266,6 +270,7 @@
 							</li>
 						</ul>
 					</div>
+					<!-- CONTENEDOR DE PRECIOS DE VIDRIO -->
 					<div class="precios-vidrios-container">
 						<h3>Precios de Vidrios</h3>
 						<ul class="precios-vidrios">
@@ -340,11 +345,149 @@
 			<!-- SECCIÓN HOJA DE PRESUPUESTO (MODAL) -->
 			<section class="hojaPresupuesto-sec">
 				<div class="hoja-container">
-
+					<!-- HOJA DE PRESUPUESTO -->
+					<div class="hoja">
+						<!-- CONTENEDOR DE INFORMACIÓN -->
+						<div class="info-container">
+							<!-- CONTENEDOR DE INFORMACIÓN 1 -->
+							<div class="info1-container">
+								<div class="info1-img-container">
+									<img src="resources/logo.png" alt="Logo">
+								</div>
+								<div class="info1-text-container">
+									<h2>PRESUPUESTO</h2>
+									<h2 id="fecha">DD/MM/AAAA</h2>
+								</div>
+							</div>
+							<!-- CONTENEDOR DE INFORMACIÓN 2 -->
+							<div class="info2-container">
+								<div class="redes1-container">
+									<img src="resources/facebook.png" alt="Facebook Logo">
+									<p>TC VIDRIERIA Y CARPINTERIA EN ALUMINIO</p>
+								</div>
+								<div class="redes2-container">
+									<img src="resources/instagram.png" alt="instagram Logo">
+									<p>TCVIDRIERIA2022</p>
+								</div>
+							</div>
+							<!-- CONTENEDOR DE INFORMACIÓN 3 -->
+							<div class="info3-container">
+								<h2>CLAUDIO ANTONIO CRISPIN</h2>
+								<h2>Avellaneda 220, 7174 Coronel Vidal, Partido de Mar Chiquita</h2>
+								<h2>CUIT/ING. BRUTOS: 20-32700428-0</h2>
+							</div>
+						</div>
+						<!-- CONTENEDOR DE INFORMACIÓN DE CLIENTE -->
+						<div class="info-cliente">
+							<!-- CONTENEDOR DE NOMBRE DE CLIENTE -->
+							<div class="cliente-nombre-container">
+								<p class="cliente-nombre-title">CLIENTE:</p>
+								<p id="nombreCliente"></p>
+							</div>
+							<!-- CONTENEDOR DE NÚMERO DE CLIENTE -->
+							<div class="cliente-numero-container">
+								<p class="cliente-numero-title">NUMERO DE TELEFONO:</p>
+								<p id="numeroCliente"></p>
+							</div>
+						</div>
+						<!-- CONTENEDOR DE INFORMACIÓN DE PRODUCTOS -->
+						<div class="datos-container">
+							<!-- TABLA CON NOMBRE, CANTIDAD Y PRECIO DE PRODUCTOS -->
+							<table>
+								<tr>
+									<th>PRODUCTO</th>
+									<th>CANT.</th>
+									<th>PRECIO</th>
+								</tr>
+								<tr>
+									<th>-----</th>
+									<th>-----</th>
+									<th>-----</th>
+								</tr>
+								<tr>
+									<th>-----</th>
+									<th>-----</th>
+									<th>-----</th>
+								</tr>
+								<tr>
+									<th>-----</th>
+									<th>-----</th>
+									<th>-----</th>
+								</tr>
+								<tr>
+									<th>-----</th>
+									<th>-----</th>
+									<th>-----</th>
+								</tr>
+								<tr>
+									<th>-----</th>
+									<th>-----</th>
+									<th>-----</th>
+								</tr>
+								<tr>
+									<th>-----</th>
+									<th>-----</th>
+									<th>-----</th>
+								</tr>
+								<tr>
+									<th>-----</th>
+									<th>-----</th>
+									<th>-----</th>
+								</tr>
+								<tr>
+									<th>-----</th>
+									<th>-----</th>
+									<th>-----</th>
+								</tr>
+								<tr>
+									<th>-----</th>
+									<th>-----</th>
+									<th>-----</th>
+								</tr>
+								<tr>
+									<th>-----</th>
+									<th>-----</th>
+									<th>-----</th>
+								</tr>
+								<tr>
+									<th>-----</th>
+									<th>-----</th>
+									<th>-----</th>
+								</tr>
+								<tr>
+									<th>-----</th>
+									<th>-----</th>
+									<th>-----</th>
+								</tr>
+								<tr>
+									<th>-----</th>
+									<th>-----</th>
+									<th>-----</th>
+								</tr>
+								<tr>
+									<th>-----</th>
+									<th>-----</th>
+									<th>-----</th>
+								</tr>
+							</table>
+						</div>
+						<!-- CONTENEDOR DE PRECIO -->
+						<div class="precio-container">
+							<!-- CONTENEDOR DE TÍTULO -->
+							<div class="precio-titulo-container">
+								<p>-- PRECIO FINAL --</p>
+							</div>
+							<!-- CONTENEDOR DE IMPORTE -->
+							<div class="precio-importe-container">
+								<p>$$$$$</p>
+							</div>
+						</div>
+					</div>
 				</div>
+				<!-- CONTENEDOR DE OPCIONES DE PRESUPUESTO -->
 				<div class="opciones-container">
-					<button onclick="cerrarModalPresupuesto()">Volver</button>
 					<button>Imprimir o Descargar</button>
+					<button onclick="cerrarModalPresupuesto()">Volver</button>
 				</div>
 			</section>
 		</header>

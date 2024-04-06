@@ -86,36 +86,37 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .header .prod-sec {
   width: 100%;
+  height: 75%;
   margin: 0 1em;
   display: flex;
   justify-content: space-around;
 }
 .header .prod-sec #tabla-producto {
-  width: 70%;
+  width: 75%;
   border-collapse: collapse;
 }
 .header .prod-sec #tabla-producto tr th {
   padding: 0.75em 2em;
-  font-size: 1em;
+  font-size: 1.25em;
   border: 2px solid #555b6e;
   color: #555b6e;
 }
 .header .prod-sec .prodSec-options-container {
-  width: 30%;
+  width: 25%;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
 }
-.header .prod-sec .prodSec-options-container h2 {
-  text-align: center;
-  font-size: 2.5em;
-  color: #555b6e;
-}
 .header .prod-sec .prodSec-options-container .prodSec-inputGroup-container {
-  margin-top: 3em;
   margin-left: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.header .prod-sec .prodSec-options-container .prodSec-inputGroup-container h2 {
+  text-align: center;
+  font-size: 3em;
+  color: #555b6e;
 }
 .header .prod-sec .prodSec-options-container .prodSec-inputGroup-container input {
   font-size: 1em;
@@ -124,24 +125,19 @@ input[type=number]::-webkit-outer-spin-button {
   height: 3em;
   width: 100%;
   border-radius: 5px;
-  margin: 0.25em;
+  margin: 0.5em 0;
   text-align: center;
   border: 2px solid #555b6e;
 }
 .header .prod-sec .prodSec-options-container .prodSec-inputGroup2-container {
-  margin-top: 1em;
   margin-left: 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .header .prod-sec .prodSec-options-container .prodSec-inputGroup2-container button {
-  font-size: 1em;
-  padding: 0.5em 1em;
+  font-size: 1.25em;
   height: 3em;
   width: 100%;
   border-radius: 5px;
-  margin: 0.25em;
+  margin: 0.5em 0;
   text-align: center;
   background-color: #555b6e;
   color: #ffffff;
@@ -153,29 +149,6 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: #333b6e;
 }
 .header .prod-sec .prodSec-options-container .prodSec-inputGroup2-container button:active {
-  transform: scale(97%);
-}
-.header .prod-sec .prodSec-options-container .prodSec-inputGroup3 {
-  margin-top: 5em;
-  margin-left: 1em;
-}
-.header .prod-sec .prodSec-options-container .prodSec-inputGroup3 button {
-  font-size: 1.25em;
-  height: 4em;
-  width: 100%;
-  border-radius: 5px;
-  margin: 0.25em;
-  text-align: center;
-  background-color: #555b6e;
-  color: #ffffff;
-  border: 2px solid #555b6e;
-  transition: all 0.2s;
-}
-.header .prod-sec .prodSec-options-container .prodSec-inputGroup3 button:hover {
-  cursor: pointer;
-  background-color: #333b6e;
-}
-.header .prod-sec .prodSec-options-container .prodSec-inputGroup3 button:active {
   transform: scale(97%);
 }
 .header .vidrio-sec {
@@ -290,7 +263,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .header .precios-sec .precios-container h3 {
   text-align: center;
-  font-size: 2em;
+  font-size: 2.25em;
   color: #555b6e;
 }
 .header .precios-sec .precios-container .precios-materiales-container, .header .precios-sec .precios-container .precios-vidrios-container {
@@ -338,10 +311,174 @@ input[type=number]::-webkit-outer-spin-button {
   height: 100%;
 }
 .header .hojaPresupuesto-sec .hoja-container {
-  margin: 1em;
-  height: 90%;
-  width: 75%;
+  background-color: #dddddd;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 80%;
+  width: auto;
   border: 2px solid #555b6e;
+  border-radius: 5px;
+  border-collapse: collapse;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja {
+  margin: 2em;
+  width: 21cm;
+  background-color: #ffffff;
+  height: 29.7cm;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-container {
+  margin: 1em 1em 0 1em;
+  border: 1px solid black;
+  height: 25%;
+  width: 95%;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-container .info1-container {
+  display: flex;
+  height: 42.5%;
+  border-bottom: 1px solid black;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-container .info1-container .info1-img-container {
+  width: 50%;
+  border-right: 1px solid black;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-container .info1-container .info1-img-container img {
+  padding: 0.25em 1em;
+  width: 100%;
+  height: 100%;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-container .info1-container .info1-text-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-container .info1-container .info1-text-container h2 {
+  text-align: center;
+  font-size: 2.5em;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-container .info1-container .info1-text-container #fecha {
+  font-size: 1.5em;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-container .info2-container {
+  height: 15%;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-container .info2-container .redes1-container {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-container .info2-container .redes1-container img {
+  padding: 0.25em;
+  border-radius: 10px;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-container .info2-container .redes1-container p {
+  font-size: 1em;
+  font-weight: bold;
+  align-self: center;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-container .info2-container .redes2-container {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-container .info2-container .redes2-container img {
+  padding: 0.25em;
+  border-radius: 10px;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-container .info2-container .redes2-container p {
+  font-size: 1em;
+  font-weight: bold;
+  align-self: center;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-container .info3-container {
+  height: 42.5%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-container .info3-container h2:nth-child(1) {
+  font-weight: bold;
+  font-size: 2em;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-container .info3-container h2:nth-child(2) {
+  font-weight: normal;
+  font-size: 1em;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-container .info3-container h2:nth-child(3) {
+  font-weight: normal;
+  font-size: 1em;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-cliente {
+  margin: 0 1em 0 1em;
+  border: 1px solid black;
+  border-bottom: none;
+  border-top: none;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-cliente .cliente-nombre-container {
+  padding: 0.25em;
+  border-right: 1px solid black;
+  width: 50%;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-cliente .cliente-nombre-container .cliente-nombre-title {
+  font-weight: bold;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-cliente .cliente-numero-container {
+  padding: 0.25em;
+  width: 50%;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .info-cliente .cliente-numero-container .cliente-numero-title {
+  font-weight: bold;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .datos-container {
+  margin: 0 1em 0 1em;
+  height: 65%;
+  width: 95%;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .datos-container table {
+  border-collapse: collapse;
+  width: 100%;
+  height: 100%;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .datos-container table tr th:nth-child(1) {
+  border: 1px solid black;
+  width: 70%;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .datos-container table tr th:nth-child(2) {
+  border: 1px solid black;
+  width: 10%;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .datos-container table tr th:nth-child(3) {
+  border: 1px solid black;
+  width: 20%;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .precio-container {
+  margin: 0 1em 1em 1em;
+  border: 1px solid black;
+  border-top: none;
+  display: flex;
+  width: 95%;
+  text-align: center;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .precio-container .precio-titulo-container {
+  font-weight: bold;
+  padding: 0.5em;
+  width: 81%;
+  border-right: 1px solid black;
+}
+.header .hojaPresupuesto-sec .hoja-container .hoja .precio-container .precio-importe-container {
+  width: 20%;
+  padding: 0.5em;
 }
 .header .hojaPresupuesto-sec .opciones-container {
   margin: 1em;
