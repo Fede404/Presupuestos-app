@@ -24,7 +24,7 @@ $color4: #bbbbbb;
 $color5: #333b6e;
 
 // MEDIA QUERIES
-@media (min-width: 320px) {
+@media (min-width > 540px) {
 	.vidrio-sec {
 		width: 75%;
 	}
@@ -33,7 +33,7 @@ $color5: #333b6e;
 	}
 }
 
-@media (min-width: 1360px) {
+@media (min-width > 1366px) {
 	.vidrio-sec {
 		width: 50%;
 	}
