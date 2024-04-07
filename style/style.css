@@ -12,6 +12,22 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+@media (min-width: 320px) {
+  .vidrio-sec {
+    width: 75%;
+  }
+  .precios-sec {
+    width: 75%;
+  }
+}
+@media (min-width: 1360px) {
+  .vidrio-sec {
+    width: 50%;
+  }
+  .precios-sec {
+    width: 50%;
+  }
+}
 .navbar {
   height: 10vh;
   display: flex;
@@ -155,7 +171,6 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 2em;
   border: 2px solid #555b6e;
   border-radius: 10px;
-  width: 50%;
   height: 75%;
   display: none;
   flex-direction: column;
@@ -250,7 +265,6 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 2em;
   border: 2px solid #555b6e;
   border-radius: 10px;
-  width: 50%;
   height: 75%;
   display: none;
   flex-direction: column;

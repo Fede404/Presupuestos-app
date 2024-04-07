@@ -24,3 +24,20 @@ $color4: #bbbbbb;
 $color5: #333b6e;
 
 // MEDIA QUERIES
+@media (min-width: 320px) {
+	.vidrio-sec {
+		width: 75%;
+	}
+	.precios-sec {
+		width: 75%;
+	}
+}
+
+@media (min-width: 1360px) {
+	.vidrio-sec {
+		width: 50%;
+	}
+	.precios-sec {
+		width: 50%;
+	}
+}
