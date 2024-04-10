@@ -11,6 +11,7 @@
 	.nav-btn-container {
 		display: flex;
 		.nav-btn {
+			height: 100%;
 			background-color: transparent;
 			border: none;
 			font-size: 1.25em;
@@ -29,12 +30,8 @@
 				color: varComp.$color2;
 			}
 		}
-		// SECCIONES PRODUCTO Y VIDRIO (MODAL)
-		.prod-container,
-		.vidrioGroup {
-			.nav-btn {
-				height: 100%;
-			}
+		// SELECTOR DE PRODUCTO
+		.prod-container {
 			z-index: 1;
 			// CONTENEDOR LISTA DE PRODUCTOS
 			.prodOptions {
@@ -228,6 +225,78 @@
 				padding: 0.25em 2em;
 				border-radius: 5px;
 				margin-top: 0.5em;
+				text-align: center;
+				background-color: varComp.$color2;
+				color: varComp.$color1;
+				border: 2px solid varComp.$color2;
+				transition: all 0.2s;
+				&:hover {
+					cursor: pointer;
+					background-color: varComp.$color5;
+				}
+				&:active {
+					transform: scale(97%);
+				}
+			}
+		}
+	}
+	// SECCIÓN LISTA (MODAL)
+	.lista-sec {
+		padding: 2em;
+		border: 2px solid varComp.$color2;
+		border-radius: 10px;
+		height: 75%;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		.lista-container {
+			height: 100%;
+			width: 75%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			h2 {
+				font-size: 3em;
+				color: varComp.$color2;
+			}
+			.prodGroup {
+				width: 100%;
+				.prod-container {
+					margin: 0.25em 0;
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					border: 1px solid varComp.$color2;
+					border-radius: 5px;
+					padding: 0.25em 1em;
+					font-size: 1.5em;
+					color: varComp.$color2;
+					button {
+						padding: 0.25em;
+						font-size: 1em;
+						border: none;
+						color: varComp.$color2;
+						background-color: varComp.$color1;
+						&:hover {
+							cursor: pointer;
+							background-color: red;
+							border-radius: 5px;
+							color: varComp.$color1;
+						}
+						&:active {
+							transform: scale(97%);
+						}
+					}
+				}
+			}
+			.list-btn {
+				height: 3em;
+				font-size: 1.25em;
+				width: 75%;
+				padding: 0.25em;
+				border-radius: 5px;
 				text-align: center;
 				background-color: varComp.$color2;
 				color: varComp.$color1;

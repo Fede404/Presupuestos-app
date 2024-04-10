@@ -28,6 +28,9 @@ $color5: #333b6e;
 	.vidrio-sec {
 		width: 75%;
 	}
+	.lista-sec {
+		width: 75%;
+	}
 	.precios-sec {
 		width: 75%;
 	}
@@ -35,6 +38,9 @@ $color5: #333b6e;
 
 @media (width > 1366px) {
 	.vidrio-sec {
+		width: 50%;
+	}
+	.lista-sec {
 		width: 50%;
 	}
 	.precios-sec {

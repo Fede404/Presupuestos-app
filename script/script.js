@@ -2,6 +2,7 @@
 let prodDiv = document.querySelector("#prodList");
 let secVidrios = document.querySelector(".vidrio-sec");
 let secProducto = document.querySelector(".prod-sec")
+let secLista = document.querySelector(".lista-sec");
 let secPrecios = document.querySelector(".precios-sec");
 let secPresupuestos = document.querySelector(".hojaPresupuesto-sec")
 
@@ -19,11 +20,47 @@ let displayChange2 = function () {
 	if (secVidrios.style.display === "none") {
 		secVidrios.style.display = "flex";
 		secProducto.style.display = "none";
+		secLista.style.display = "none";
 		secPrecios.style.display = "none";
 		secPresupuestos.style.display = "none";
 	} else {
-		secVidrios.style.display = "none";
 		secProducto.style.display = "flex";
+		secVidrios.style.display = "none";
+		secLista.style.display = "none";
+		secPrecios.style.display = "none";
+		secPresupuestos.style.display = "none";
+	}
+};
+
+// FUNCIÓN ALTERNAR ENTRE DIVS PRINCIPAL Y LISTA DE PRODUCTOS CON BOTÓN DE NAV
+let displayChange3 = function () {
+	if (secLista.style.display === "none") {
+		secLista.style.display = "flex";
+		secProducto.style.display = "none";
+		secVidrios.style.display = "none";
+		secPrecios.style.display = "none";
+		secPresupuestos.style.display = "none";
+	} else {
+		secProducto.style.display = "flex";
+		secLista.style.display = "none";
+		secVidrios.style.display = "none";
+		secPrecios.style.display = "none";
+		secPresupuestos.style.display = "none";
+	}
+};
+
+// FUNCIÓN ALTERNAR ENTRE DIVS PRINCIPAL Y PRECIOS CON BOTÓN DE NAV
+let displayChange4 = function () {
+	if (secPrecios.style.display === "none") {
+		secPrecios.style.display = "flex";
+		secProducto.style.display = "none";
+		secVidrios.style.display = "none";
+		secLista.style.display = "none";
+		secPresupuestos.style.display = "none";
+	} else {
+		secProducto.style.display = "flex";
+		secVidrios.style.display = "none";
+		secLista.style.display = "none";
 		secPrecios.style.display = "none";
 		secPresupuestos.style.display = "none";
 	}
@@ -33,46 +70,30 @@ let displayChange2 = function () {
 let cerrarModalVidrio = function() {
 	secVidrios.style.display = "none";
 	secProducto.style.display = "flex";
-	secPrecios.style.display = "none";
-	secPresupuestos.style.display = "none";
 }
 
-// FUNCIÓN ALTERNAR ENTRE DIVS PRINCIPAL Y PRCIOS CON BOTÓN DE NAV
-let displayChange3 = function () {
-	if (secPrecios.style.display === "none") {
-		secPrecios.style.display = "flex";
-		secProducto.style.display = "none";
-		secVidrios.style.display = "none";
-		secPresupuestos.style.display = "none";
-	} else {
-		secPrecios.style.display = "none";
-		secProducto.style.display = "flex";
-		secVidrios.style.display = "none";
-		secPresupuestos.style.display = "none";
-	}
-};
+// FUNCIÓN CERRAR MODAL LISTA CON BOTÓN VOLVER
+let cerrarModalLista = function() {
+	secLista.style.display = "none";
+	secProducto.style.display = "flex";
+}
 
-// FUNCIÓN CERRAR MODAL DE PRECIO
+// FUNCIÓN CERRAR MODAL PRECIO CON BOTÓN VOLVER
 let cerrarModalPrecio = function() {
-	secVidrios.style.display = "none";
 	secProducto.style.display = "flex";
 	secPrecios.style.display = "none";
-	secPresupuestos.style.display = "none";
 }
 
 // FUNCIÓN ABRIR MODAL PRESUPUESTO CON BOTÓN DE HEADER
 let abrirModalPresupuesto = function() {
-	secVidrios.style.display = "none";
 	secProducto.style.display = "none";
-	secPrecios.style.display = "none";
 	secPresupuestos.style.display = "flex";
+	secVidrios.style.display = "none";
 }
 
 // FUNCIÓN CERRAR MODAL PRESUPUESTO
 let cerrarModalPresupuesto = function() {
-	secVidrios.style.display = "none";
 	secProducto.style.display = "flex";
-	secPrecios.style.display = "none";
 	secPresupuestos.style.display = "none";
 } 
 

@@ -52,17 +52,14 @@
 						</button>
 					</div>
 				</div>
-				<!-- DIV VIDRIO -->
-				<div class="vidrioGroup">
-					<button class="nav-btn" onclick="displayChange2()">
-						Seleccionar Vidrio
-					</button>
-				</div>
+				<button class="nav-btn" onclick="displayChange2()">
+					Seleccionar Vidrio
+				</button>
 			</div>
 			<!-- DIV PRECIOS Y LISTA -->
 			<div class="nav-btn-container">
-				<button class="nav-btn">Ver Lista</button>
-				<button class="nav-btn" onclick="displayChange3()">
+				<button class="nav-btn" onclick="displayChange3()">Ver Lista</button>
+				<button class="nav-btn" onclick="displayChange4()">
 					Modificar Precios
 				</button>
 			</div>
@@ -216,6 +213,36 @@
 					<button onclick="cerrarModalVidrio()">
 						Volver
 					</button>
+				</div>
+			</section>
+			<!-- SECCIÓN LISTA DE PRODUCTOS -->
+			<section class="lista-sec">
+				<div class="lista-container">
+					<h2>Lista de Productos</h2>
+					<div class="prodGroup">
+						<div class="prod-container">
+							<p>(2) Producto 1</p>
+							<button>X</button>
+						</div>
+						<div class="prod-container">
+							<p>(1) Producto 2</p>
+							<button>X</button>
+						</div>
+						<div class="prod-container">
+							<p>(2) Producto 3</p>
+							<button>X</button>
+						</div>
+						<div class="prod-container">
+							<p>(2) Producto 4</p>
+							<button>X</button>
+						</div>
+						<div class="prod-container">
+							<p>(1) Producto 5</p>
+							<button>X</button>
+						</div>
+					</div>
+					<button class="list-btn">Limpiar Lista</button>
+					<button class="list-btn" onclick="cerrarModalLista()">Guardar y Volver</button>
 				</div>
 			</section>
 			<!-- SECCIÓN DE PRECIOS (MODAL) -->

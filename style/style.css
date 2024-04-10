@@ -16,12 +16,18 @@ input[type=number]::-webkit-outer-spin-button {
   .vidrio-sec {
     width: 75%;
   }
+  .lista-sec {
+    width: 75%;
+  }
   .precios-sec {
     width: 75%;
   }
 }
 @media (width > 1366px) {
   .vidrio-sec {
+    width: 50%;
+  }
+  .lista-sec {
     width: 50%;
   }
   .precios-sec {
@@ -39,6 +45,7 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
 }
 .navbar .nav-btn-container .nav-btn {
+  height: 100%;
   background-color: transparent;
   border: none;
   font-size: 1.25em;
@@ -57,16 +64,10 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: #ffffff;
   color: #555b6e;
 }
-.navbar .nav-btn-container .prod-container,
-.navbar .nav-btn-container .vidrioGroup {
+.navbar .nav-btn-container .prod-container {
   z-index: 1;
 }
-.navbar .nav-btn-container .prod-container .nav-btn,
-.navbar .nav-btn-container .vidrioGroup .nav-btn {
-  height: 100%;
-}
-.navbar .nav-btn-container .prod-container .prodOptions,
-.navbar .nav-btn-container .vidrioGroup .prodOptions {
+.navbar .nav-btn-container .prod-container .prodOptions {
   border: 2px solid #555b6e;
   margin-top: 0.5em;
   list-style: none;
@@ -74,8 +75,7 @@ input[type=number]::-webkit-outer-spin-button {
   flex-direction: column;
   align-items: center;
 }
-.navbar .nav-btn-container .prod-container .prodOptions .list-btn,
-.navbar .nav-btn-container .vidrioGroup .prodOptions .list-btn {
+.navbar .nav-btn-container .prod-container .prodOptions .list-btn {
   padding: 0.25em 0;
   border: none;
   background-color: #ffffff;
@@ -84,13 +84,11 @@ input[type=number]::-webkit-outer-spin-button {
   color: #555b6e;
   transition: background-color 0.2s;
 }
-.navbar .nav-btn-container .prod-container .prodOptions .list-btn:hover,
-.navbar .nav-btn-container .vidrioGroup .prodOptions .list-btn:hover {
+.navbar .nav-btn-container .prod-container .prodOptions .list-btn:hover {
   background-color: #dddddd;
   cursor: pointer;
 }
-.navbar .nav-btn-container .prod-container .prodOptions .list-btn:active,
-.navbar .nav-btn-container .vidrioGroup .prodOptions .list-btn:active {
+.navbar .nav-btn-container .prod-container .prodOptions .list-btn:active {
   background-color: #bbbbbb;
 }
 
@@ -259,6 +257,77 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: #333b6e;
 }
 .header .vidrio-sec .precio-vidrio-container button:active {
+  transform: scale(97%);
+}
+.header .lista-sec {
+  padding: 2em;
+  border: 2px solid #555b6e;
+  border-radius: 10px;
+  height: 75%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.header .lista-sec .lista-container {
+  height: 100%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .lista-sec .lista-container h2 {
+  font-size: 3em;
+  color: #555b6e;
+}
+.header .lista-sec .lista-container .prodGroup {
+  width: 100%;
+}
+.header .lista-sec .lista-container .prodGroup .prod-container {
+  margin: 0.25em 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #555b6e;
+  border-radius: 5px;
+  padding: 0.25em 1em;
+  font-size: 1.5em;
+  color: #555b6e;
+}
+.header .lista-sec .lista-container .prodGroup .prod-container button {
+  padding: 0.25em;
+  font-size: 1em;
+  border: none;
+  color: #555b6e;
+  background-color: #ffffff;
+}
+.header .lista-sec .lista-container .prodGroup .prod-container button:hover {
+  cursor: pointer;
+  background-color: red;
+  border-radius: 5px;
+  color: #ffffff;
+}
+.header .lista-sec .lista-container .prodGroup .prod-container button:active {
+  transform: scale(97%);
+}
+.header .lista-sec .lista-container .list-btn {
+  height: 3em;
+  font-size: 1.25em;
+  width: 75%;
+  padding: 0.25em;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #555b6e;
+  color: #ffffff;
+  border: 2px solid #555b6e;
+  transition: all 0.2s;
+}
+.header .lista-sec .lista-container .list-btn:hover {
+  cursor: pointer;
+  background-color: #333b6e;
+}
+.header .lista-sec .lista-container .list-btn:active {
   transform: scale(97%);
 }
 .header .precios-sec {
