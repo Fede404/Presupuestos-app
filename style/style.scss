@@ -1,14 +1,18 @@
 @use "varComp.scss";
 
+// ESTILOS NAV
 .navbar {
 	height: 10vh;
 	display: flex;
+	width: 100%;
 	justify-content: space-between;
 	background-color: varComp.$color2;
 	padding: 0.5em;
-	.nav-btnGroup {
+	// CONTENEDOR DE BOTONES PRODUCTO, VIDRIO Y PRECIO
+	.nav-btn-container {
 		display: flex;
 		.nav-btn {
+			height: 100%;
 			background-color: transparent;
 			border: none;
 			font-size: 1.25em;
@@ -27,9 +31,10 @@
 				color: varComp.$color2;
 			}
 		}
-		.prodGroup,
-		.vidrioGroup {
-			z-index: 10;
+		// SELECTOR DE PRODUCTO
+		.prod-container {
+			z-index: 1;
+			// CONTENEDOR LISTA DE PRODUCTOS
 			.prodOptions {
 				border: 2px solid varComp.$color2;
 				margin-top: 0.5em;
@@ -58,84 +63,67 @@
 	}
 }
 
+// ESTILOS HEADER
 .header {
-	height: 90vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	// SECCIÓN PRODUCTOS
 	.prod-sec {
-		margin: 0 1em;
+		margin: 1em;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
+		// TABLA DE PRODUCTO
 		#tabla-producto {
+			width: 75%;
 			border-collapse: collapse;
 			tr {
 				th {
 					padding: 0.75em 2em;
-					font-size: 1em;
+					font-size: 1.25em;
 					border: 2px solid varComp.$color2;
 					color: varComp.$color2;
 				}
 			}
 		}
-		.prodSec-options {
+		// MEDIDAS DE PRODUCTO
+		.prodSec-options-container {
+			width: 25%;
 			display: flex;
+			justify-content: space-between;
 			flex-direction: column;
-			h2 {
-				text-align: center;
-				font-size: 2.5em;
-				color: varComp.$color2;
-			}
-			.prodSec-inputGroup {
-				margin-top: 3em;
+			// CONTENEDOR DE INPUTS DE MEDIDAS
+			.prodSec-inputGroup-container {
 				margin-left: 1em;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+				h2 {
+					text-align: center;
+					font-size: 3em;
+					color: varComp.$color2;
+				}
 				input {
+					font-size: 1em;
 					background-color: transparent;
 					padding: 0.25em 1em;
+					height: 3em;
 					width: 100%;
 					border-radius: 5px;
-					margin: 0.25em;
+					margin: 0.5em 0;
 					text-align: center;
 					border: 2px solid varComp.$color2;
 				}
 			}
-			.prodSec-inputGroup2 {
-				margin-top: 1em;
-				margin-left: 1em;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				button {
-					padding: 0.5em 1em;
-					width: 100%;
-					border-radius: 5px;
-					margin: 0.25em;
-					text-align: center;
-					background-color: varComp.$color2;
-					color: varComp.$color1;
-					border: 2px solid varComp.$color2;
-					transition: all 0.2s;
-					&:hover {
-						cursor: pointer;
-						background-color: varComp.$color5;
-					}
-					&:active {
-						transform: scale(97%);
-					}
-				}
-			}
-			.prodSec-inputGroup3 {
-				margin-top: 5em;
+			// CONTENEDOR DE BOTONES DE MEDIDAS
+			.prodSec-inputGroup2-container {
 				margin-left: 1em;
 				button {
-					font-size: 1em;
-					padding: 1.5em;
+					font-size: 1.25em;
+					height: 3em;
 					width: 100%;
 					border-radius: 5px;
-					margin: 0.25em;
+					margin: 0.5em 0;
 					text-align: center;
 					background-color: varComp.$color2;
 					color: varComp.$color1;
@@ -152,24 +140,30 @@
 			}
 		}
 	}
+	// SECCIÓN VIDRIOS (MODAL)
 	.vidrio-sec {
-		padding: 1em;
+		margin: 1em;
+		padding: 2em;
 		border: 2px solid varComp.$color2;
 		border-radius: 10px;
-		width: 50%;
 		height: 75%;
 		display: none;
 		flex-direction: column;
 		align-items: center;
+		justify-content: space-between;
 		h2 {
 			font-size: 3em;
 			color: varComp.$color2;
 		}
-		.vidrio-medidas-sec {
+		// CONTENEDOR DE MEDIDAS DE VIDRIO
+		.vidrio-medidas-container {
 			display: flex;
-			width: 100%;
+			width: 75%;
 			justify-content: center;
 			input {
+				font-size: 1em;
+				width: 100%;
+				height: 3em;
 				padding: 0.25em 1.75em;
 				border: 2px solid varComp.$color2;
 				border-radius: 5px;
@@ -177,8 +171,11 @@
 				text-align: center;
 			}
 		}
-		.vidrio-select {
+		// CONTENEDOR DE SELECT DE VIDRIO
+		.vidrio-select-container {
+			width: 75%;
 			select {
+				font-size: 1em;
 				text-align: center;
 				width: 100%;
 				padding: 0.25em 2.5em;
@@ -187,12 +184,12 @@
 				border-radius: 5px;
 			}
 			button {
+				margin-top: 0.5em;
 				height: 2.5em;
 				width: 100%;
 				font-size: 1em;
 				padding: 0.25em 2em;
 				border-radius: 5px;
-				margin: 0.25em;
 				text-align: center;
 				background-color: varComp.$color2;
 				color: varComp.$color1;
@@ -207,63 +204,147 @@
 				}
 			}
 		}
-		.precio-vidrio {
-			margin-top: 1em;
+		// CONTENEDOR DE PRECIO VIDRIO
+		.precio-vidrio-container {
+			display: flex;
+			flex-direction: column;
+			width: 75%;
 			input {
 				height: 5em;
+				font-size: 1.5em;
 				width: 100%;
 				border: 2px solid varComp.$color2;
 				border-radius: 5px;
 				text-align: center;
+				margin-top: 0.25em;
 			}
-			.btn-group-vidrio {
-				button {
-					height: 2.5em;
-					font-size: 1em;
-					padding: 0.25em 2em;
-					border-radius: 5px;
-					margin: 0.25em;
-					text-align: center;
-					background-color: varComp.$color2;
-					color: varComp.$color1;
-					border: 2px solid varComp.$color2;
-					transition: all 0.2s;
-					&:hover {
-						cursor: pointer;
-						background-color: varComp.$color5;
-					}
-					&:active {
-						transform: scale(97%);
-					}
+			button {
+				height: 2.5em;
+				font-size: 1em;
+				padding: 0.25em 2em;
+				border-radius: 5px;
+				margin-top: 0.5em;
+				text-align: center;
+				background-color: varComp.$color2;
+				color: varComp.$color1;
+				border: 2px solid varComp.$color2;
+				transition: all 0.2s;
+				&:hover {
+					cursor: pointer;
+					background-color: varComp.$color5;
+				}
+				&:active {
+					transform: scale(97%);
 				}
 			}
 		}
 	}
-	.precios-sec {
+	// SECCIÓN LISTA (MODAL)
+	.lista-sec {
+		padding: 2em;
+		margin: 1em;
 		border: 2px solid varComp.$color2;
 		border-radius: 10px;
-		width: 50%;
-		height: 90%;
+		height: 75%;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		.lista-container {
+			height: 100%;
+			width: 75%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			h2 {
+				font-size: 3em;
+				color: varComp.$color2;
+			}
+			.prodGroup {
+				width: 100%;
+				.prod-container {
+					margin: 0.25em 0;
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					border: 1px solid varComp.$color2;
+					border-radius: 5px;
+					padding: 0.25em 1em;
+					font-size: 1.5em;
+					color: varComp.$color2;
+					button {
+						padding: 0.25em;
+						font-size: 1em;
+						border: none;
+						color: varComp.$color2;
+						background-color: varComp.$color1;
+						&:hover {
+							cursor: pointer;
+							background-color: red;
+							border-radius: 5px;
+							color: varComp.$color1;
+						}
+						&:active {
+							transform: scale(97%);
+						}
+					}
+				}
+			}
+			.list-btn {
+				margin-top: 0.5em;
+				height: 3em;
+				font-size: 1em;
+				width: 75%;
+				padding: 0.25em;
+				border-radius: 5px;
+				text-align: center;
+				background-color: varComp.$color2;
+				color: varComp.$color1;
+				border: 2px solid varComp.$color2;
+				transition: all 0.2s;
+				&:hover {
+					cursor: pointer;
+					background-color: varComp.$color5;
+				}
+				&:active {
+					transform: scale(97%);
+				}
+			}
+		}
+	}
+	// SECCIÓN PRECIOS (MODAL)
+	.precios-sec {
+		margin: 1em;
+		padding: 2em;
+		border: 2px solid varComp.$color2;
+		border-radius: 10px;
+		height: 75%;
 		display: none;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		// CONTENEDOR DE PRECIOS
 		.precios-container {
 			display: flex;
 			flex-direction: row;
 			h3 {
 				text-align: center;
-				font-size: 1.5em;
+				font-size: 2.25em;
 				color: varComp.$color2;
 			}
-			div {
+			// CONTENEDORES PRECIO MATERIALES Y PRECIO VIDRIO
+			.precios-materiales-container,
+			.precios-vidrios-container {
 				margin: 0 2em;
 				ul {
 					list-style: none;
 					li {
 						input {
+							width: 100%;
+							height: 2.5em;
 							text-align: center;
-							margin-bottom: 0.25em;
+							margin-bottom: 0.5em;
 							padding: 0.25em 1em;
 							font-size: 1em;
 							border: 2px solid varComp.$color2;
@@ -275,11 +356,12 @@
 			}
 		}
 		button {
-			height: 2.5em;
-			font-size: 1em;
-			padding: 0.25em 2em;
+			height: 3em;
+			font-size: 1.25em;
+			width: 75%;
+			padding: 0.25em;
+			margin-top: 1em;
 			border-radius: 5px;
-			margin: 0.25em;
 			text-align: center;
 			background-color: varComp.$color2;
 			color: varComp.$color1;
@@ -291,6 +373,230 @@
 			}
 			&:active {
 				transform: scale(97%);
+			}
+		}
+	}
+	// SECCIÓN HOJA DE PRESUPUESTOS (MODAL)
+	.hojaPresupuesto-sec {
+		margin: 1em;
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		// CONTENEDOR DE HOJA
+		.hoja-container {
+			background-color: varComp.$color3;
+			display: flex;
+			justify-content: center;
+			margin: auto;
+			height: 80%;
+			width: auto;
+			border: 2px solid varComp.$color2;
+			border-radius: 5px;
+			border-collapse: collapse;
+			// DIV DE HOJA
+			.hoja {
+				margin: 2em;
+				width: 21cm;
+				background-color: varComp.$color1;
+				height: 29.7cm;
+				// CONTENEDOR DE INFORMACIÓN
+				.info-container {
+					margin: 1em 1em 0 1em;
+					border: 1px solid black;
+					height: 25%;
+					width: 95%;
+					// CONTENEDOR DE SECCIÓN DE INFORMACIÓN 1
+					.info1-container {
+						display: flex;
+						height: 42.5%;
+						border-bottom: 1px solid black;
+						// CONTENEDOR DE LOGO
+						.info1-img-container {
+							width: 50%;
+							border-right: 1px solid black;
+							img {
+								padding: 0.25em 1em;
+								width: 100%;
+								height: 100%;
+							}
+						}
+						// CONTENEDOR DE TEXTO
+						.info1-text-container {
+							width: 50%;
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+							h2 {
+								text-align: center;
+								font-size: 2.5em;
+							}
+							#fecha {
+								font-size: 1.5em;
+							}
+						}
+					}
+					// CONTENEDOR DE SECCIÓN DE INFORMACIÓN 2
+					.info2-container {
+						height: 15%;
+						border-bottom: 1px solid black;
+						display: flex;
+						flex-direction: row;
+						justify-content: space-around;
+						// CONTENEDOR DE REDES 1
+						.redes1-container {
+							display: flex;
+							flex-direction: row;
+							width: auto;
+							img {
+								padding: 0.25em;
+								border-radius: 10px;
+							}
+							p {
+								font-size: 1em;
+								font-weight: bold;
+								align-self: center;
+							}
+						}
+						// CONTENEDOR DE REDES 2
+						.redes2-container {
+							display: flex;
+							flex-direction: row;
+							width: auto;
+							img {
+								padding: 0.25em;
+								border-radius: 10px;
+							}
+							p {
+								font-size: 1em;
+								font-weight: bold;
+								align-self: center;
+							}
+						}
+					}
+					// CONTENEDOR DE SECCIÓN DE INFORMACIÓN 3
+					.info3-container {
+						height: 42.5%;
+						text-align: center;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						h2:nth-child(1) {
+							font-weight: bold;
+							font-size: 2em;
+						}
+						h2:nth-child(2) {
+							font-weight: normal;
+							font-size: 1em;
+						}
+						h2:nth-child(3) {
+							font-weight: normal;
+							font-size: 1em;
+						}
+					}
+				}
+				// CONTENEDOR DE INFORMACIÓN DE CLIENTE
+				.info-cliente {
+					margin: 0 1em 0 1em;
+					border: 1px solid black;
+					border-bottom: none;
+					border-top: none;
+					width: 95%;
+					display: flex;
+					flex-direction: row;
+					// CONTENEDOR DE NOMBRE DE CLIENTE
+					.cliente-nombre-container {
+						padding: 0.25em;
+						border-right: 1px solid black;
+						width: 50%;
+						.cliente-nombre-title {
+							font-weight: bold;
+						}
+					}
+					// CONTENEDOR DE NÚMERO DE CLIENTE
+					.cliente-numero-container {
+						padding: 0.25em;
+						width: 50%;
+						.cliente-numero-title {
+							font-weight: bold;
+						}
+					}
+				}
+				// CONTENEDOR DE TABLA DE INFORMACIÓN DE PRODUCTO
+				.datos-container {
+					margin: 0 1em 0 1em;
+					height: 65%;
+					width: 95%;
+					table {
+						border-collapse: collapse;
+						width: 100%;
+						height: 100%;
+						tr {
+							th:nth-child(1) {
+								border: 1px solid black;
+								width: 70%;
+							}
+							th:nth-child(2) {
+								border: 1px solid black;
+								width: 10%;
+							}
+							th:nth-child(3) {
+								border: 1px solid black;
+								width: 20%;
+							}
+						}
+					}
+				}
+				// CONTENEDOR DE PRECIO FINAL DE PRESUPUESTO
+				.precio-container {
+					margin: 0 1em 1em 1em;
+					border: 1px solid black;
+					border-top: none;
+					display: flex;
+					width: 95%;
+					text-align: center;
+					// CONTENEDOR DE TÍTULO
+					.precio-titulo-container {
+						font-weight: bold;
+						padding: 0.5em;
+						width: 81%;
+						border-right: 1px solid black;
+					}
+					// CONTENEDOR DE IMPORTE
+					.precio-importe-container {
+						width: 20%;
+						padding: 0.5em;
+					}
+				}
+			}
+		}
+		// CONTENEDOR DE OPCIONES DE PRESUPUESTO
+		.opciones-container {
+			margin: 1em;
+			height: 10%;
+			width: 75%;
+			display: flex;
+			justify-content: space-around;
+			button {
+				height: 3em;
+				font-size: 1.25em;
+				width: 30%;
+				padding: 0.25em;
+				margin-top: 1em;
+				border-radius: 5px;
+				text-align: center;
+				background-color: varComp.$color2;
+				color: varComp.$color1;
+				border: 2px solid varComp.$color2;
+				transition: all 0.2s;
+				&:hover {
+					cursor: pointer;
+					background-color: varComp.$color5;
+				}
+				&:active {
+					transform: scale(97%);
+				}
 			}
 		}
 	}

@@ -24,3 +24,33 @@ $color4: #bbbbbb;
 $color5: #333b6e;
 
 // MEDIA QUERIES
+@media (width > 540px) {
+	.prod-sec {
+		width: 100%;
+	}
+	.vidrio-sec {
+		width: 75%;
+	}
+	.lista-sec {
+		width: 75%;
+	}
+	.precios-sec {
+		width: 75%;
+	}
+}
+
+@media (width > 1366px) {
+	.vidrio-sec {
+		width: 50%;
+	}
+	.lista-sec {
+		width: 50%;
+	}
+	.precios-sec {
+		width: 50%;
+	}
+	.hojaPresupuesto-sec {
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+}
